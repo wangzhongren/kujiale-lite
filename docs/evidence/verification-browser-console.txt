@@ -1,0 +1,32 @@
+SHOT verification-01-login.png
+SHOT verification-02-empty-list.png
+PASS UI register via real API -> empty plan list
+PASS created blank 演示户型 via UI
+PASS blank plan starts from one 12 m2 room
+SHOT verification-03-blank-plan.png
+PASS 2D keyboard zoom out keeps both rooms reachable
+PASS drew second connected room by clicking canvas (7 walls / 2 rooms)
+SHOT verification-04-two-rooms.png
+PASS placed 2 doors + 2 windows on walls
+SHOT verification-05-openings.png
+SHOT verification-06-furniture-materials.png
+PASS 3 furniture placed and rotated, 2 room materials applied
+SHOT verification-07-3d-orbit.png
+PASS 3D orbit view renders and drag orbit executed
+SHOT verification-08-3d-first-person.png
+PASS 3D first-person mode active
+PASS saved document revision 2 with 2 rooms/4 openings/3 furniture
+PASS room names and materials persisted in the same document
+PASS all 3 furniture rotations are 30 degrees
+SHOT verification-09-saved.png
+SHOT verification-10-list-after-relogin.png
+PASS logout/login -> opened from list with revision 2 and same document
+SHOT verification-11-reopened.png
+PASS read-only share link generated via UI
+PASS anonymous share 2D shows the same 2-room document read-only
+PASS share page has no editing controls and offers CSV list download
+SHOT verification-12-share-2d.png
+PASS anonymous share 3D uses the same document
+SHOT verification-13-share-3d.png
+PASS anonymous shared CSV has UTF-8 BOM + CRLF + 12.00/9.00
+PASS shared CSV includes per-room material IDs

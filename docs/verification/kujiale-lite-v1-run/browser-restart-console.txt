@@ -1,0 +1,4 @@
+PASS after process restart: login + open from list retains revision 2
+PASS after process restart: same 7 walls / 4 openings / 3 furniture / 2 rooms
+PASS after process restart: room names/materials/rotations retained
+SHOT verification-14-restart-reopened.png

@@ -1,0 +1,5 @@
+# startup/listening events
+startup ts=2026-10-20T13:28:16.037Z url=- dataDir=D:\work\项目\酷家乐\data\verification-run-1792502895 dbPath=D:\work\项目\酷家乐\data\verification-run-1792502895\kujiale.db staticInstalled=-
+listening ts=2026-10-20T13:28:16.049Z url=http://127.0.0.1:8080 dataDir=D:\work\项目\酷家乐\data\verification-run-1792502895 dbPath=- staticInstalled=True
+startup ts=2026-10-20T13:28:39.214Z url=- dataDir=D:\work\项目\酷家乐\data\verification-run-1792502895 dbPath=D:\work\项目\酷家乐\data\verification-run-1792502895\kujiale.db staticInstalled=-
+listening ts=2026-10-20T13:28:39.222Z url=http://127.0.0.1:8080 dataDir=D:\work\项目\酷家乐\data\verification-run-1792502895 dbPath=- staticInstalled=True

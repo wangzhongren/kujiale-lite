@@ -1,0 +1,13 @@
+# verification test matrix
+
+generated: 2026-10-20T13:28:15Z
+
+backend: python -m unittest discover -s tests -v
+  exit=0; ran=141; result=OK
+  full output: docs/evidence/verification-test-run.txt
+
+frontend: node --test --test-reporter=spec tests/frontend/catalog-api.test.js tests/frontend/geometry.test.js tests/frontend/store.test.js tests/frontend/undo.test.js
+  exit=0; pass=35; fail=0
+  full output: docs/evidence/verification-node-test-output.txt
+
+Both suites are green; no assertions were weakened.

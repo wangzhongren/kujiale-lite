@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "sofa-2",
+      "name": "双人沙发",
+      "category": "seating",
+      "shape": "box",
+      "width": 1600,
+      "depth": 850,
+      "height": 800,
+      "color": "#7d8b99"
+    },
+    {
+      "id": "sofa-3",
+      "name": "三人沙发",
+      "category": "seating",
+      "shape": "box",
+      "width": 2100,
+      "depth": 900,
+      "height": 800,
+      "color": "#8a9aa8"
+    },
+    {
+      "id": "armchair",
+      "name": "单人扶手椅",
+      "category": "seating",
+      "shape": "box",
+      "width": 800,
+      "depth": 800,
+      "height": 850,
+      "color": "#a98467"
+    },
+    {
+      "id": "coffee-table",
+      "name": "茶几",
+      "category": "table",
+      "shape": "box",
+      "width": 1000,
+      "depth": 600,
+      "height": 420,
+      "color": "#b08968"
+    },
+    {
+      "id": "dining-table",
+      "name": "餐桌",
+      "category": "table",
+      "shape": "box",
+      "width": 1400,
+      "depth": 800,
+      "height": 750,
+      "color": "#9c6644"
+    },
+    {
+      "id": "chair",
+      "name": "餐椅",
+      "category": "seating",
+      "shape": "box",
+      "width": 450,
+      "depth": 450,
+      "height": 900,
+      "color": "#7f5539"
+    },
+    {
+      "id": "bed-double",
+      "name": "双人床",
+      "category": "bed",
+      "shape": "box",
+      "width": 1800,
+      "depth": 2000,
+      "height": 500,
+      "color": "#ced4da"
+    },
+    {
+      "id": "wardrobe",
+      "name": "衣柜",
+      "category": "storage",
+      "shape": "box",
+      "width": 1800,
+      "depth": 600,
+      "height": 2200,
+      "color": "#6c757d"
+    },
+    {
+      "id": "desk",
+      "name": "书桌",
+      "category": "table",
+      "shape": "box",
+      "width": 1200,
+      "depth": 600,
+      "height": 750,
+      "color": "#8d6e63"
+    },
+    {
+      "id": "tv-stand",
+      "name": "电视柜",
+      "category": "storage",
+      "shape": "box",
+      "width": 1600,
+      "depth": 400,
+      "height": 450,
+      "color": "#495057"
+    },
+    {
+      "id": "rug",
+      "name": "地毯",
+      "category": "decor",
+      "shape": "box",
+      "width": 2000,
+      "depth": 1400,
+      "height": 20,
+      "color": "#d8c3a5"
+    },
+    {
+      "id": "plant",
+      "name": "绿植",
+      "category": "decor",
+      "shape": "cylinder",
+      "width": 500,
+      "depth": 500,
+      "height": 1200,
+      "color": "#4f772d"
+    }
+  ]
+}

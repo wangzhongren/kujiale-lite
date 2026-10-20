@@ -1,0 +1,7 @@
+{
+  "name": "kujiale-lite-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "酷家乐简易版前端（原生 ES Modules，无构建步骤）"
+}

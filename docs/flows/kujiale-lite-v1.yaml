@@ -1,0 +1,71 @@
+flowId: kujiale-lite-v1
+version: 1
+qualityTier: production
+steps:
+  - id: nomination
+    title: 提名：Crew / 组队读取提案并给出候选角色
+    owner: nominator
+    kind: dispatch
+    status: superseded
+    evidence:
+      kind: dispatch
+      ref: nomination
+    supersededBy: nomination-record
+  - id: nomination-record
+    title: 提名与任命记录：Crew / 组队提名文档 + 客户任命落卡（按产物证据核证）
+    owner: nominator
+    kind: artifact
+    status: done
+    evidence:
+      kind: artifact
+      ref: docs/nominations/kujiale-lite-v1-v1.md
+    supersedes:
+      - nomination
+  - id: contract-freeze
+    title: 冻结跨角色契约（API v1、方案文档 schema v1、模块边界与质量下限）
+    owner: rapporteur
+    kind: artifact
+    status: done
+    evidence:
+      kind: artifact
+      ref: docs/contracts/kujiale-lite-interface-v1.md
+  - id: implementation-backend
+    title: 后端实现：认证/会话、SQLite 迁移与原子写、方案 CRUD、几何校验、只读分享、CSV 导出（app/ 分层，http → auth/plans/share/export → db，依赖无环）
+    owner: backend
+    kind: dispatch
+    status: done
+    evidence:
+      kind: dispatch
+      ref: implementation-backend
+  - id: implementation-frontend
+    title: 前端实现：2D 编辑器与撤销栈、同源 3D 轨道/第一人称、家具材质目录、加载/空/错误三态与可访问性（web/ 仅经 /api/v1 访问后端）
+    owner: frontend
+    kind: dispatch
+    status: done
+    evidence:
+      kind: dispatch
+      ref: implementation-frontend
+  - id: integration-e2e
+    title: 集成与端到端联调：契约对齐、unittest 单元/集成/HTTP 端到端与 node:test 前端纯函数、权限与非法路径负例、真实启动
+    owner: backend
+    kind: dispatch
+    status: done
+    evidence:
+      kind: dispatch
+      ref: integration-e2e
+  - id: verification-evidence
+    title: 真实启动应用并演示：python -m app --port 8080、http://127.0.0.1:8080、全流程截图/录屏、测试全绿输出、示例 CSV、401/403/404/409 日志摘录、重启恢复证据
+    owner: backend
+    kind: artifact
+    status: done
+    evidence:
+      kind: artifact
+      ref: docs/evidence/verification-evidence.md
+  - id: verification
+    title: 验收（由应用自动派 Proof / 验收，不由统筹占用）
+    owner: app
+    kind: acceptance
+    status: done
+    evidence:
+      kind: acceptance
+      ref: acceptance

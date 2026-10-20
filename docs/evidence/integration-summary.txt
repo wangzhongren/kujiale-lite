@@ -1,0 +1,122 @@
+# integration-e2e 集成与端到端联调报告
+
+- 生成时间：2026-10-20T12:54:23Z
+- 质量档位：production（不放宽）
+- 真实服务：`python -m app --port 8080` · http://127.0.0.1:8080
+- 数据目录：`data/`（SQLite `data/kujiale.db`）
+- 浏览器：本机 Chrome/Edge headless（CDP 真实页面驱动）
+
+## 1. 测试矩阵（两端全绿）
+
+```text
+backend unittest: exit=0 OK (python -m unittest discover -s tests -v)
+frontend node:test: exit=0 OK (4 files, 35 expected)
+```
+
+后端完整输出：`docs/evidence/test-run.txt`；前端完整输出：`docs/evidence/node-test-output.txt`；汇总：`docs/evidence/integration-test-summary.txt`。
+
+## 2. 契约逐项核对（真实 HTTP）
+
+| 检查 | 请求 | 状态 | requestId | 错误码 |
+| --- | --- | --- | --- | --- |
+| 应用壳 index.html | `GET /` | 200 | `752546476652501a3971e1f50a6c42fb` | - |
+| 应用入口 JS | `GET /js/app.js` | 200 | `eae3ab4bddb7f2a1d298952c281466fc` | - |
+| 内置 Three.js | `GET /vendor/three/three.module.js` | 200 | `f3586a20957b118ddd06175875213607` | - |
+| Three.js LICENSE | `GET /vendor/three/LICENSE` | 200 | `d5f3eb771823154edc875a4e346ac7ba` | - |
+| 公开目录 | `GET /api/v1/catalog` | 200 | `263a273139f67e9ef69348df5e474a68` | - |
+| 未登录方案列表 -> 401 | `GET /api/v1/plans` | 401 | `62b392da9f4dcdcf4a7b763b65aab7b7` | AUTH_REQUIRED |
+| 注册 owner | `POST /api/v1/auth/register` | 201 | `c432d063e30f9570df729beb7637f779` | - |
+| 登录 owner | `POST /api/v1/auth/login` | 200 | `9950d322cd3b0c32585b0d857f69c020` | - |
+| 会话检查 | `GET /api/v1/auth/me` | 200 | `92793d6b4fcb7e6847caace8e7fc9d1b` | - |
+| 样板间 | `GET /api/v1/sample` | 200 | `0f4dfd610c69676ae6ea2182a8ba9fac` | - |
+| 从样板间新建 | `POST /api/v1/plans` | 201 | `72480051c4f938f265de0b6d82aee783` | - |
+| 分页 pageSize=100 | `GET /api/v1/plans?page=1&pageSize=100` | 200 | `3201ea10b773ae9971410041d3379e82` | - |
+| 保存 revision 1 -> 2 | `PUT /api/v1/plans/12` | 200 | `ba6b5e89f32e9d72c39ac8c2799d57ba` | - |
+| 旧 revision -> 409 | `PUT /api/v1/plans/12` | 409 | `6c50f18cce08fda3d1560b57551c98e8` | CONFLICT_REVISION |
+| 缺 CSRF -> 403 | `PUT /api/v1/plans/12` | 403 | `6b510046b5cac3ff37a4dcccafca3c63` | FORBIDDEN |
+| 更高 schemaVersion -> 422 | `PUT /api/v1/plans/12` | 422 | `52184ce155a57cb383abe9e675473778` | UNSUPPORTED_SCHEMA_VERSION |
+| 注册 other | `POST /api/v1/auth/register` | 201 | `94db50c50f1e586a898abecb38701021` | - |
+| 登录 other | `POST /api/v1/auth/login` | 200 | `1a84cd120387e1dc7aa48a85205d00c9` | - |
+| 越权读 -> 404 | `GET /api/v1/plans/12` | 404 | `195fd76ef96d1a3cd4ff3316db520e37` | NOT_FOUND |
+| 越权写 -> 404 | `PUT /api/v1/plans/12` | 404 | `a3a30bf61175fc08e690107b32e26376` | NOT_FOUND |
+| 越权分享 -> 404 | `POST /api/v1/plans/12/share` | 404 | `b018ccb7ead3dea9daad39d7c72ef011` | NOT_FOUND |
+| 注册限速账号 | `POST /api/v1/auth/register` | 201 | `b3c87369dbaac87de0694bac800bd43c` | - |
+| 错误口令 1 -> 401 | `POST /api/v1/auth/login` | 401 | `cf92d0ce8a49d1eba09b640c574bd4bf` | AUTH_INVALID_CREDENTIALS |
+| 错误口令 2 -> 401 | `POST /api/v1/auth/login` | 401 | `547abc259bc9e9309a3c7129acadac11` | AUTH_INVALID_CREDENTIALS |
+| 错误口令 3 -> 401 | `POST /api/v1/auth/login` | 401 | `349b9c23fc5e4980c3ae81d2c7f630f8` | AUTH_INVALID_CREDENTIALS |
+| 错误口令 4 -> 401 | `POST /api/v1/auth/login` | 401 | `97d7b8c76f717e9110729fbdaa51c2c8` | AUTH_INVALID_CREDENTIALS |
+| 错误口令 5 -> 401 | `POST /api/v1/auth/login` | 401 | `6607593c6ad5d3ea1b53bc81b85b4d07` | AUTH_INVALID_CREDENTIALS |
+| 连续失败 -> 429 | `POST /api/v1/auth/login` | 429 | `f96dd2e1033f282dbc512a4226ef2e48` | AUTH_RATE_LIMITED |
+| 签发只读分享 | `POST /api/v1/plans/12/share` | 201 | `932856c83127d55fdf4c2187432de33c` | - |
+| 公开只读 JSON API | `GET /api/v1/share/[redacted]` | 200 | `a0f2646c412bb1173d118464db7902ff` | - |
+| 浏览器分享页（HTML） | `GET /share/[redacted]` | 200 | `a4fe844d533cde9e9ee219af2ba89e66` | - |
+| 分享页 Accept: application/json -> 404 | `GET /share/[redacted]` | 404 | `da974b93a078f5c27d1eb31d7fb49561` | NOT_FOUND |
+| 分享 API 写方法 -> 405 | `PUT /api/v1/share/[redacted]` | 405 | `ba724984f74073560c72bdd7a8ba2159` | METHOD_NOT_ALLOWED |
+| 分享页写方法 -> 405 | `PUT /share/[redacted]` | 405 | `a055dcfd609ec583f1c5afce3e990445` | METHOD_NOT_ALLOWED |
+| owner CSV | `GET /api/v1/plans/12/export.csv` | 200 | `254a7d9b337f891565fca9395047f1bd` | - |
+| shared CSV | `GET /api/v1/share/[redacted]/export.csv` | 200 | `3650a4af64415da281ae3630a63e6b9f` | - |
+| 新建公式注入测试方案 | `POST /api/v1/plans` | 201 | `cc0badc1104fb952693762e4fdb7dab5` | - |
+| 公式注入 CSV | `GET /api/v1/plans/13/export.csv` | 200 | `f51829b79658a29203fea7322a94cd9d` | - |
+| 删除公式测试方案 | `DELETE /api/v1/plans/13` | 204 | `6e3521ee1c635055add89e458aea24dc` | - |
+| 浏览器账号登录（撤销校验） | `POST /api/v1/auth/login` | 200 | `4b8c220a8c4d5a5cdaceae02fcd2cfe5` | - |
+| 撤销浏览器分享 | `DELETE /api/v1/plans/14/share` | 204 | `f74237a8db329a8e9deaaf3dab247c1e` | - |
+| 撤销后 API -> 404 | `GET /api/v1/share/[redacted]` | 404 | `31ccac4ea8ddbfcfe4fb2673648b8d42` | NOT_FOUND |
+| 重启后会话 | `GET /api/v1/auth/me` | 200 | `740741041a7c4f2947e1e3a76576887c` | - |
+| 重启后方案 | `GET /api/v1/plans/12` | 200 | `1392bdfffd15cb22b5c8e40efa323604` | - |
+| 重启后分享 | `GET /api/v1/share/[redacted]` | 200 | `688b415cc893af29fb3e44913b60fdc2` | - |
+
+### 关键结论
+
+- 认证/会话/CSRF/限速：登录 Cookie 为 HttpOnly + SameSite=Lax；CSRF 双提交；5 次失败后 429。
+- 方案 CRUD/隔离：他人方案读、写、分享一律 404；旧 revision 409 且错误体 requestId 与响应头一致；未登录 401；缺 CSRF 403。
+- 分享语义：`POST /api/v1/plans/{id}/share` 返回相对页面链接 `/share/{token}`；浏览器打开该链接得到 SPA 只读页（2D/3D/只读清单），`GET /api/v1/share/{token}` 返回只读 JSON。分享 API 与页面写方法均 405。
+- CSV：owner 与 shared 两个入口字节完全一致；首字节 `EF BB BF`、CRLF、列名精确、房间面积 12.00/9.00；`=2+3` 与 `@SUM(...)` 均被前置 `'`，逗号/引号按 RFC4180 往返。
+- 静态资源：index.html、`/js/app.js`、`/vendor/three/three.module.js`、LICENSE 均 200；CSP 同源且无 unsafe-eval。
+- `X-Content-Type-Options` 重复问题已在 `app/http/static.py` 修复（安全头由 `Response.send` 统一发出），本次实测为单值 `nosniff`。
+
+## 3. CSV BOM 口径冲突的结论
+
+此前出现「后端 bom=True / 前端首字节 114」的分歧，114 是 `r`（`room_name` 的首字母），说明那次测量取到的是解码后字符串或已去 BOM 的文本，而不是服务端原始字节。
+
+这次用**同一个真实服务**复测三方口径：
+
+- Python 直接读响应字节：首 3 字节 `EF BB BF`，`bom=true`，CRLF=true（owner 与 shared 相同）。
+- 浏览器下载文件：196 字节，首 3 字节 `efbbbf`，含 12.00/9.00。
+- 前端此前证据的 `firstCode=65279` 是 `U+FEFF` 的字符码，只要按 UTF-8 解码就是同一事实；`114` 则是缺少 BOM 的旧测量口径。
+- 结论：服务端 CSV 确实带 UTF-8 BOM；测量必须基于原始字节（`body.startswith(b'\xef\xbb\xbf')`）或先按 UTF-8 解码再检查 `charCodeAt(0) === 0xFEFF`，不能对已去 BOM 的文本取首字节。
+
+## 4. 浏览器全流程（真实页面）
+
+流程：注册 → 空列表 → 从样板间新建 → 2D 编辑（删除墙体 + 撤销、应用地面材质）→ 3D 漫游 → 保存 → 列表重开 → 分享链接 → 只读分享页 2D/3D → CSV 下载。
+
+- 浏览器结果：planId=14，保存后 revision=2。
+- 分享页 URL 语义：`/share/{token}`（浏览器只读页）与 `/api/v1/share/{token}`（只读 JSON）均已实测。
+- 截图：`docs/evidence/integration-login.png`、`integration-empty-list.png`、`integration-editor-2d.png`、`integration-editor-3d.png`、`integration-list.png`、`integration-share-2d.png`、`integration-share-3d.png`。
+- 浏览器下载 CSV：`docs/evidence/browser-download.csv`（196 字节）。
+
+### 撤销后失效
+
+- 撤销后 API：HTTP 404 NOT_FOUND（页面数据请求同样 404）。
+- 撤销后浏览器页面：SPA 壳仍可加载（静态资源），但数据请求 404，页面展示「分享链接无效/已撤销」错误态；截图 `docs/evidence/integration-share-revoked.png`。
+- 撤销态检查：["PASS revoked share page shows invalid/revoked error :: {\"title\":\"分享链接无效\",\"text\":\"该分享链接无效或已被撤销。\",\"meta\":\"错误码 NOT_FOUND · requestId f0ba5461a5714902f312bd257b8e525c\",\"editor\":false}", "PASS revoked share page exposes NOT_FOUND + requestId :: {\"title\":\"分享链接无效\",\"text\":\"该分享链接无效或已被撤销。\",\"meta\":\"错误码 NOT_FOUND · requestId f0ba5461a5714902f312bd257b8e525c\",\"editor\":false}"]
+
+## 5. 重启恢复
+
+- 强停前：user_version=1 integrity_check=ok users=23 sessions=20 plans=10 shares=12
+- 冷启动后：user_version=1 integrity_check=ok users=23 sessions=20 plans=10 shares=12
+- 重启后会话：HTTP 200；方案：HTTP 200；另建的分享：HTTP 200。
+- 说明：使用 `process.terminate()` 模拟崩溃，重启使用同一 data 目录与同一 SQLite 文件。
+
+## 6. 未通过 / 风险项
+
+- 未通过项：无（两端测试全绿，契约检查与浏览器流程全部通过）。
+- 风险：单机单人/SQLite 单写者边界不变；3D 为基元级渲染；分享页撤销后的失效依赖前端调用只读 API（API 本身已 404），这是 SPA 的预期行为。
+- 本步骤完成不等于整体验收；`verification-evidence` 与 `verification` 仍另行推进。
+
+## 7. 复现命令
+
+```text
+python -m unittest discover -s tests -v
+node --test --test-reporter=spec tests/frontend/*.test.js
+python tests/e2e/run_integration.py
+```

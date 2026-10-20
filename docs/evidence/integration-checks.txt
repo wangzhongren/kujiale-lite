@@ -1,0 +1,37 @@
+01. backend unittest: exit=0 OK (python -m unittest discover -s tests -v)
+02. frontend node:test: exit=0 OK (4 files, 35 expected)
+03. real server ready: GET /api/v1/catalog -> 200 on http://127.0.0.1:8080
+04. static index: 200 text/html; nosniff=['nosniff']; CSP same-origin, no unsafe-eval
+05. 应用入口 JS: 200 (22944 bytes, contains 'navigate')
+06. 内置 Three.js: 200 (1272972 bytes, contains 'REVISION')
+07. Three.js LICENSE: 200 (1081 bytes, contains 'MIT License')
+08. catalog: furniture=12, materials=8
+09. session cookie: HttpOnly + SameSite=Lax; CSRF cookie readable (double-submit)
+10. sample plan: id=12 revision=1 totalAreaM2=21.00 areas=[9.0, 12.0]
+11. plan save: revision 1 -> 2
+12. stale revision: 409 CONFLICT_REVISION, requestId matches header
+13. login rate limit: 5 x 401 then 429 AUTH_RATE_LIMITED
+14. share issued: relative page URL /share/<redacted> (token length 43)
+15. share semantics: /share/{token} = browser SPA (HTML); /api/v1/share/{token} = read-only JSON; writes 405
+16. CSV owner==shared bytes: first3=efbbbf, CRLF, columns exact, areas 12.00/9.00
+17. CSV injection: '=2+3 and '@SUM(...) neutralised; comma/quote RFC4180 round-trip exact
+18. real HTTP contract matrix completed
+19. PASS UI register -> empty plan list :: {"username":"browser_1792500845"}
+20. PASS sample plan opened in 2D editor :: {"label":"2D 户型画布（可编辑）：7 面墙，4 个门窗，7 件家具，2 个房间。"}
+21. PASS 2D edit: Delete wall (7->6), Ctrl+Z restores 7
+22. PASS 2D edit: material change marks document dirty
+23. PASS 3D view uses the same document (7 walls / 2 rooms / 7 furniture) :: {"label":"3D 视图（轨道）：7 面墙，2 个房间，7 件家具。轨道：拖拽旋转，滚轮缩放，Shift 或右键拖拽平移；第一人称：点击画面锁定鼠标，WASD 移动。"}
+24. PASS save through real API :: {"planId":14,"revision":2}
+25. PASS CSV download: UTF-8 BOM + CRLF :: {"first3":"efbbbf","bytes":196}
+26. PASS CSV download: 12.00/9.00 room areas :: {"bytes":196}
+27. PASS share link generated in UI :: {"present":true}
+28. PASS list reopen: same 7 walls / 2 rooms :: {"label":"2D 户型画布（可编辑）：7 面墙，4 个门窗，7 件家具，2 个房间。"}
+29. PASS anonymous share page: 2D read-only document :: {"label":"2D 户型画布（只读查看）：7 面墙，4 个门窗，7 件家具，2 个房间。"}
+30. PASS share page has no edit controls :: {"editor":false,"badge":"只读分享","note":"这是只读分享：可以查看 2D/3D 与下载 CSV，不能修改方案。分享令牌撤销后，此链接立即失效。","editButtons":[]}
+31. PASS share page: 3D uses the same document :: {"label":"3D 视图（轨道）：7 面墙，2 个房间，7 件家具。轨道：拖拽旋转，滚轮缩放，Shift 或右键拖拽平移；第一人称：点击画面锁定鼠标，WASD 移动。"}
+32. real browser UI journey completed
+33. PASS revoked share page shows invalid/revoked error :: {"title":"分享链接无效","text":"该分享链接无效或已被撤销。","meta":"错误码 NOT_FOUND · requestId f0ba5461a5714902f312bd257b8e525c","editor":false}
+34. PASS revoked share page exposes NOT_FOUND + requestId :: {"title":"分享链接无效","text":"该分享链接无效或已被撤销。","meta":"错误码 NOT_FOUND · requestId f0ba5461a5714902f312bd257b8e525c","editor":false}
+35. revoked share: API 404 and browser error state verified
+36. cold restart: server ready on the same data directory
+37. restart recovery: session 200, plan 200 with same revision, share 200 readOnly

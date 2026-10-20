@@ -1,0 +1,3 @@
+command: python -m unittest discover -s tests -v
+note: tests/unit, tests/integration, tests/e2e are separate top-level packages; the parent tests/ directory is outside the backend write boundary, so discovery is rooted at tests/.
+ran=141 failures=0 errors=0 successful=True elapsedSeconds=5.678

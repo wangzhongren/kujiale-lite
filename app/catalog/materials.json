@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "floor-oak",
+      "name": "浅橡木地板",
+      "kind": "floor",
+      "color": "#c8a97e",
+      "pattern": "planks"
+    },
+    {
+      "id": "floor-walnut",
+      "name": "胡桃木地板",
+      "kind": "floor",
+      "color": "#8b5a3c",
+      "pattern": "planks"
+    },
+    {
+      "id": "floor-tile-grey",
+      "name": "灰色瓷砖",
+      "kind": "floor",
+      "color": "#b8bcc0",
+      "pattern": "tiles"
+    },
+    {
+      "id": "floor-marble",
+      "name": "白色大理石",
+      "kind": "floor",
+      "color": "#e8e6df",
+      "pattern": "stone"
+    },
+    {
+      "id": "paint-warm-white",
+      "name": "暖白乳胶漆",
+      "kind": "wall",
+      "color": "#f3efe6",
+      "pattern": "paint"
+    },
+    {
+      "id": "paint-sage",
+      "name": "鼠尾草绿",
+      "kind": "wall",
+      "color": "#a8b5a0",
+      "pattern": "paint"
+    },
+    {
+      "id": "paint-sky",
+      "name": "天空蓝",
+      "kind": "wall",
+      "color": "#a9c4d8",
+      "pattern": "paint"
+    },
+    {
+      "id": "wall-tile-white",
+      "name": "白色墙砖",
+      "kind": "wall",
+      "color": "#eef0f1",
+      "pattern": "tiles"
+    }
+  ]
+}

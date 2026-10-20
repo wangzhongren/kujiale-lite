@@ -1,0 +1,182 @@
+{
+  "furniture": [
+    {
+      "id": "sofa-2",
+      "name": "双人沙发",
+      "category": "seating",
+      "shape": "box",
+      "width": 1600,
+      "depth": 850,
+      "height": 800,
+      "color": "#7d8b99"
+    },
+    {
+      "id": "sofa-3",
+      "name": "三人沙发",
+      "category": "seating",
+      "shape": "box",
+      "width": 2100,
+      "depth": 900,
+      "height": 800,
+      "color": "#8a9aa8"
+    },
+    {
+      "id": "armchair",
+      "name": "单人扶手椅",
+      "category": "seating",
+      "shape": "box",
+      "width": 800,
+      "depth": 800,
+      "height": 850,
+      "color": "#a98467"
+    },
+    {
+      "id": "coffee-table",
+      "name": "茶几",
+      "category": "table",
+      "shape": "box",
+      "width": 1000,
+      "depth": 600,
+      "height": 420,
+      "color": "#b08968"
+    },
+    {
+      "id": "dining-table",
+      "name": "餐桌",
+      "category": "table",
+      "shape": "box",
+      "width": 1400,
+      "depth": 800,
+      "height": 750,
+      "color": "#9c6644"
+    },
+    {
+      "id": "chair",
+      "name": "餐椅",
+      "category": "seating",
+      "shape": "box",
+      "width": 450,
+      "depth": 450,
+      "height": 900,
+      "color": "#7f5539"
+    },
+    {
+      "id": "bed-double",
+      "name": "双人床",
+      "category": "bed",
+      "shape": "box",
+      "width": 1800,
+      "depth": 2000,
+      "height": 500,
+      "color": "#ced4da"
+    },
+    {
+      "id": "wardrobe",
+      "name": "衣柜",
+      "category": "storage",
+      "shape": "box",
+      "width": 1800,
+      "depth": 600,
+      "height": 2200,
+      "color": "#6c757d"
+    },
+    {
+      "id": "desk",
+      "name": "书桌",
+      "category": "table",
+      "shape": "box",
+      "width": 1200,
+      "depth": 600,
+      "height": 750,
+      "color": "#8d6e63"
+    },
+    {
+      "id": "tv-stand",
+      "name": "电视柜",
+      "category": "storage",
+      "shape": "box",
+      "width": 1600,
+      "depth": 400,
+      "height": 450,
+      "color": "#495057"
+    },
+    {
+      "id": "rug",
+      "name": "地毯",
+      "category": "decor",
+      "shape": "box",
+      "width": 2000,
+      "depth": 1400,
+      "height": 20,
+      "color": "#d8c3a5"
+    },
+    {
+      "id": "plant",
+      "name": "绿植",
+      "category": "decor",
+      "shape": "cylinder",
+      "width": 500,
+      "depth": 500,
+      "height": 1200,
+      "color": "#4f772d"
+    }
+  ],
+  "materials": [
+    {
+      "id": "floor-oak",
+      "name": "浅橡木地板",
+      "kind": "floor",
+      "color": "#c8a97e",
+      "pattern": "planks"
+    },
+    {
+      "id": "floor-walnut",
+      "name": "胡桃木地板",
+      "kind": "floor",
+      "color": "#8b5a3c",
+      "pattern": "planks"
+    },
+    {
+      "id": "floor-tile-grey",
+      "name": "灰色瓷砖",
+      "kind": "floor",
+      "color": "#b8bcc0",
+      "pattern": "tiles"
+    },
+    {
+      "id": "floor-marble",
+      "name": "白色大理石",
+      "kind": "floor",
+      "color": "#e8e6df",
+      "pattern": "stone"
+    },
+    {
+      "id": "paint-warm-white",
+      "name": "暖白乳胶漆",
+      "kind": "wall",
+      "color": "#f3efe6",
+      "pattern": "paint"
+    },
+    {
+      "id": "paint-sage",
+      "name": "鼠尾草绿",
+      "kind": "wall",
+      "color": "#a8b5a0",
+      "pattern": "paint"
+    },
+    {
+      "id": "paint-sky",
+      "name": "天空蓝",
+      "kind": "wall",
+      "color": "#a9c4d8",
+      "pattern": "paint"
+    },
+    {
+      "id": "wall-tile-white",
+      "name": "白色墙砖",
+      "kind": "wall",
+      "color": "#eef0f1",
+      "pattern": "tiles"
+    }
+  ]
+}

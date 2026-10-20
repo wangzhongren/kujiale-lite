@@ -1,0 +1,7 @@
+{
+  "name": "kujiale-lite-frontend-tests",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "前端纯函数测试（node --test）"
+}

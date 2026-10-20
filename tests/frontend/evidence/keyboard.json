@@ -1,0 +1,72 @@
+[
+  {
+    "step": "初始对象计数",
+    "walls": 7,
+    "openings": 4,
+    "furniture": 7,
+    "rooms": 2,
+    "dirty": "已保存",
+    "undoDisabled": true,
+    "redoDisabled": true
+  },
+  {
+    "step": "Delete 删除墙体",
+    "walls": 6,
+    "openings": 3,
+    "furniture": 7,
+    "rooms": 1,
+    "dirty": "未保存",
+    "undoDisabled": false,
+    "redoDisabled": true
+  },
+  {
+    "step": "Ctrl+Z 撤销",
+    "walls": 7,
+    "openings": 4,
+    "furniture": 7,
+    "rooms": 2,
+    "dirty": "未保存",
+    "undoDisabled": true,
+    "redoDisabled": false
+  },
+  {
+    "step": "Ctrl+Shift+Z 重做",
+    "walls": 6,
+    "openings": 3,
+    "furniture": 7,
+    "rooms": 1,
+    "dirty": "未保存",
+    "undoDisabled": false,
+    "redoDisabled": true
+  },
+  {
+    "step": "再次 Ctrl+Z 还原",
+    "walls": 7,
+    "openings": 4,
+    "furniture": 7,
+    "rooms": 2,
+    "dirty": "未保存",
+    "undoDisabled": true,
+    "redoDisabled": false
+  },
+  {
+    "step": "Ctrl+S 保存",
+    "result": "已保存"
+  },
+  {
+    "step": "Tab 焦点",
+    "tag": "A",
+    "text": "跳到主要内容",
+    "focusVisible": true,
+    "outlineStyle": "auto",
+    "outlineWidth": "1px",
+    "outlineColor": "rgb(16, 16, 16)"
+  },
+  {
+    "step": "375px 布局",
+    "scrollWidth": 375,
+    "clientWidth": 375,
+    "shellWidth": 351,
+    "sidebarCollapsed": "false"
+  }
+]

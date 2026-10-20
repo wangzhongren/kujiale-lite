@@ -1,0 +1,18 @@
+# negative-path request log excerpts (401/403/404/409/422/429)
+ts=2026-10-20T12:54:04.534Z requestId=62b392da9f4dcdcf4a7b763b65aab7b7 route='GET /api/v1/plans' status=401 durationMs=0.62 errCode=AUTH_REQUIRED
+ts=2026-10-20T12:54:04.769Z requestId=6c50f18cce08fda3d1560b57551c98e8 route='PUT /api/v1/plans/{plan_id}' status=409 durationMs=5.47 errCode=CONFLICT_REVISION
+ts=2026-10-20T12:54:04.770Z requestId=6b510046b5cac3ff37a4dcccafca3c63 route='PUT /api/v1/plans/{plan_id}' status=403 durationMs=0.9 errCode=FORBIDDEN
+ts=2026-10-20T12:54:04.791Z requestId=52184ce155a57cb383abe9e675473778 route='PUT /api/v1/plans/{plan_id}' status=422 durationMs=5.13 errCode=UNSUPPORTED_SCHEMA_VERSION
+ts=2026-10-20T12:54:04.883Z requestId=195fd76ef96d1a3cd4ff3316db520e37 route='GET /api/v1/plans/{plan_id}' status=404 durationMs=6.59 errCode=NOT_FOUND
+ts=2026-10-20T12:54:04.891Z requestId=a3a30bf61175fc08e690107b32e26376 route='PUT /api/v1/plans/{plan_id}' status=404 durationMs=6.19 errCode=NOT_FOUND
+ts=2026-10-20T12:54:04.917Z requestId=b018ccb7ead3dea9daad39d7c72ef011 route='POST /api/v1/plans/{plan_id}/share' status=404 durationMs=5.56 errCode=NOT_FOUND
+ts=2026-10-20T12:54:05.009Z requestId=cf92d0ce8a49d1eba09b640c574bd4bf route='POST /api/v1/auth/login' status=401 durationMs=40.27 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:54:05.051Z requestId=547abc259bc9e9309a3c7129acadac11 route='POST /api/v1/auth/login' status=401 durationMs=41.37 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:54:05.109Z requestId=349b9c23fc5e4980c3ae81d2c7f630f8 route='POST /api/v1/auth/login' status=401 durationMs=41.62 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:54:05.175Z requestId=97d7b8c76f717e9110729fbdaa51c2c8 route='POST /api/v1/auth/login' status=401 durationMs=46.35 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:54:05.233Z requestId=6607593c6ad5d3ea1b53bc81b85b4d07 route='POST /api/v1/auth/login' status=401 durationMs=41.11 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:54:05.236Z requestId=f96dd2e1033f282dbc512a4226ef2e48 route='POST /api/v1/auth/login' status=429 durationMs=1.35 errCode=AUTH_RATE_LIMITED
+ts=2026-10-20T12:54:05.271Z requestId=da974b93a078f5c27d1eb31d7fb49561 route='static' status=404 durationMs=0.37 errCode=NOT_FOUND
+ts=2026-10-20T12:54:05.685Z requestId=6b90ecd0397de9da03feea8cdf3cdf18 route='GET /api/v1/auth/me' status=401 durationMs=1.79 errCode=AUTH_REQUIRED
+ts=2026-10-20T12:54:17.550Z requestId=31ccac4ea8ddbfcfe4fb2673648b8d42 route='GET /api/v1/share/{token}' status=404 durationMs=4.7 errCode=NOT_FOUND
+ts=2026-10-20T12:54:17.884Z requestId=f0ba5461a5714902f312bd257b8e525c route='GET /api/v1/share/{token}' status=404 durationMs=7.2 errCode=NOT_FOUND

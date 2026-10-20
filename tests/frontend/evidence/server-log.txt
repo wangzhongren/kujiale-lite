@@ -1,0 +1,5 @@
+{"ts":"2026-10-20T12:45:40.431Z","level":"WARNING","event":"request","requestId":"dce595060f72a10875988ee0702e631a","method":"PUT","route":"PUT /api/v1/plans/{plan_id}","status":409,"durationMs":5.13,"errCode":"CONFLICT_REVISION","userId":1}
+{"ts":"2026-10-20T12:45:40.456Z","level":"WARNING","event":"request","requestId":"81d83fa02f2f00b8be9e5a6685245817","method":"PUT","route":"unmatched","status":405,"durationMs":0.12,"errCode":"METHOD_NOT_ALLOWED"}
+{"ts":"2026-10-20T12:45:40.462Z","level":"WARNING","event":"request","requestId":"42b81e2d57f6ff5a477409b6a22e0ed5","method":"GET","route":"GET /api/v1/plans","status":401,"durationMs":0.7,"errCode":"AUTH_REQUIRED"}
+{"ts":"2026-10-20T12:45:40.793Z","level":"WARNING","event":"request","requestId":"fe9559b6d842e8d8241d47bc37427f43","method":"GET","route":"GET /api/v1/auth/me","status":401,"durationMs":1.25,"errCode":"AUTH_REQUIRED"}
+{"ts":"2026-10-20T12:45:53.177Z","level":"WARNING","event":"request","requestId":"9bc347879a74ba9238f4ad36575f5991","method":"GET","route":"GET /api/v1/auth/me","status":401,"durationMs":1.48,"errCode":"AUTH_REQUIRED"}

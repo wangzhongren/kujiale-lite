@@ -1,0 +1,181 @@
+{"ts":"2026-10-20T13:47:46.322Z","level":"INFO","event":"startup","host":"127.0.0.1","port":8080,"dataDir":"C:\\Users\\MLoong\\AppData\\Local\\Temp\\kujiale-accept-vh4it2hu","dbPath":"C:\\Users\\MLoong\\AppData\\Local\\Temp\\kujiale-accept-vh4it2hu\\kujiale.db","staticDir":"D:\\work\\项目\\酷家乐\\web","logLevel":"INFO","sessionTtlHours":168,"secureCookie":false}
+{"ts":"2026-10-20T13:47:46.334Z","level":"INFO","event":"listening","url":"http://127.0.0.1:8080","host":"127.0.0.1","port":8080,"schemaVersion":1,"dataDir":"C:\\Users\\MLoong\\AppData\\Local\\Temp\\kujiale-accept-vh4it2hu","staticDir":"D:\\work\\项目\\酷家乐\\web","staticInstalled":true}
+{"ts":"2026-10-20T13:47:46.713Z","level":"INFO","event":"request","requestId":"263533ff9c2e830838e9dc9efdf56ba2","method":"GET","route":"GET /api/v1/catalog","status":200,"durationMs":2.44,"errCode":null}
+{"ts":"2026-10-20T13:47:47.009Z","level":"INFO","event":"request","requestId":"b437364481d2537aad3b6947c427a5a8","method":"GET","route":"static","status":200,"durationMs":0.76,"errCode":null}
+{"ts":"2026-10-20T13:47:47.017Z","level":"INFO","event":"request","requestId":"e5b12f31d5a77ae7222eb5ae7ec8f355","method":"GET","route":"static","status":200,"durationMs":0.74,"errCode":null}
+{"ts":"2026-10-20T13:47:47.017Z","level":"INFO","event":"request","requestId":"c2c70b38de9ad2b02497d5d58c42bfd6","method":"GET","route":"static","status":200,"durationMs":0.96,"errCode":null}
+{"ts":"2026-10-20T13:47:47.022Z","level":"INFO","event":"request","requestId":"47a61eebcd8873bfed9a61647521a0fa","method":"GET","route":"static","status":200,"durationMs":1.67,"errCode":null}
+{"ts":"2026-10-20T13:47:47.022Z","level":"INFO","event":"request","requestId":"14b09e3e1e2396e7028929602bcc8b24","method":"GET","route":"static","status":200,"durationMs":1.55,"errCode":null}
+{"ts":"2026-10-20T13:47:47.022Z","level":"INFO","event":"request","requestId":"2fdee611915f85153fa99a98395a696a","method":"GET","route":"static","status":200,"durationMs":1.17,"errCode":null}
+{"ts":"2026-10-20T13:47:47.022Z","level":"INFO","event":"request","requestId":"6c377ae831d33b1770043acfe2149795","method":"GET","route":"static","status":200,"durationMs":1.95,"errCode":null}
+{"ts":"2026-10-20T13:47:47.022Z","level":"INFO","event":"request","requestId":"c9084a9dd9a995b110f615f57f6470ea","method":"GET","route":"static","status":200,"durationMs":2.01,"errCode":null}
+{"ts":"2026-10-20T13:47:47.025Z","level":"INFO","event":"request","requestId":"990a9769e9c89dc9fc991fa0476f7d5b","method":"GET","route":"static","status":200,"durationMs":0.73,"errCode":null}
+{"ts":"2026-10-20T13:47:47.025Z","level":"INFO","event":"request","requestId":"0a20c811c4d311f15cd4cfb2552c304b","method":"GET","route":"static","status":200,"durationMs":1.09,"errCode":null}
+{"ts":"2026-10-20T13:47:47.026Z","level":"INFO","event":"request","requestId":"0c8840b5daa2b7db748f3dbb81ace0f5","method":"GET","route":"static","status":200,"durationMs":1.03,"errCode":null}
+{"ts":"2026-10-20T13:47:47.028Z","level":"INFO","event":"request","requestId":"8b1d937d9666d659afac207d095d794a","method":"GET","route":"static","status":200,"durationMs":0.54,"errCode":null}
+{"ts":"2026-10-20T13:47:47.032Z","level":"WARNING","event":"request","requestId":"4cc69e362356bdff41efd740b496f491","method":"GET","route":"GET /api/v1/auth/me","status":401,"durationMs":1.5,"errCode":"AUTH_REQUIRED"}
+{"ts":"2026-10-20T13:47:47.437Z","level":"INFO","event":"request","requestId":"44b5c10a407905ae3be6208b9f8a4824","method":"POST","route":"POST /api/v1/auth/register","status":201,"durationMs":47.51,"errCode":null}
+{"ts":"2026-10-20T13:47:47.483Z","level":"INFO","event":"request","requestId":"07ea60a8710ac670f55732a43672b0ba","method":"POST","route":"POST /api/v1/auth/login","status":200,"durationMs":44.12,"errCode":null}
+{"ts":"2026-10-20T13:47:47.487Z","level":"INFO","event":"request","requestId":"21f3ad3767853bf1f0f2d8af79d07ccf","method":"GET","route":"GET /api/v1/auth/me","status":200,"durationMs":1.84,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:47:47.496Z","level":"INFO","event":"request","requestId":"e0a841e8509f1a4506b168f4960f2837","method":"GET","route":"GET /api/v1/plans","status":200,"durationMs":6.33,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:47:47.801Z","level":"INFO","event":"request","requestId":"c10dbd7a9142d215747a4cf7b14bf3cc","method":"POST","route":"POST /api/v1/plans","status":201,"durationMs":9.1,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:47:47.811Z","level":"INFO","event":"request","requestId":"7eaf2cffdbbf3bf156a9d214ca00182e","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":200,"durationMs":7.35,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:47:47.837Z","level":"INFO","event":"request","requestId":"80e1eb22b6284fe4e2e1156f3045fa38","method":"GET","route":"GET /api/v1/catalog","status":200,"durationMs":1.46,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:47:47.958Z","level":"INFO","event":"request","requestId":"315fa607870c6125469dcfca97d030cc","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":200,"durationMs":6.24,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:47:56.114Z","level":"INFO","event":"request","requestId":"c94d97406e18ffc5fad605d754dda680","method":"GET","route":"static","status":200,"durationMs":0.6,"errCode":null}
+{"ts":"2026-10-20T13:47:56.117Z","level":"INFO","event":"request","requestId":"8eb9ead57822e2895a184fe70f295598","method":"GET","route":"static","status":200,"durationMs":1.27,"errCode":null}
+{"ts":"2026-10-20T13:48:00.737Z","level":"INFO","event":"request","requestId":"ee1f82895b84404a78ebbb6a6cd2cb7a","method":"PUT","route":"PUT /api/v1/plans/{plan_id}","status":200,"durationMs":10.55,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:00.888Z","level":"INFO","event":"request","requestId":"e9a641bf814c46c9a82b49ace55ecad6","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":200,"durationMs":6.57,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:00.941Z","level":"INFO","event":"request","requestId":"c2989c968374ec3daf046acd7285cccb","method":"POST","route":"POST /api/v1/auth/logout","status":204,"durationMs":8.66,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:00.946Z","level":"WARNING","event":"request","requestId":"e3cccfb00be90cc6b3388180e4149f3e","method":"GET","route":"GET /api/v1/auth/me","status":401,"durationMs":2.37,"errCode":"AUTH_REQUIRED"}
+{"ts":"2026-10-20T13:48:00.951Z","level":"WARNING","event":"request","requestId":"bf7be6898ee83bf4c649c2c743f9da4c","method":"GET","route":"GET /api/v1/auth/me","status":401,"durationMs":2.29,"errCode":"AUTH_REQUIRED"}
+{"ts":"2026-10-20T13:48:01.089Z","level":"INFO","event":"request","requestId":"6c607a46eb91e01cab5f8dc32846b8a3","method":"GET","route":"static","status":200,"durationMs":0.51,"errCode":null}
+{"ts":"2026-10-20T13:48:01.094Z","level":"INFO","event":"request","requestId":"71eb1ee8ed755595ce8248974db6c671","method":"GET","route":"static","status":200,"durationMs":0.76,"errCode":null}
+{"ts":"2026-10-20T13:48:01.094Z","level":"INFO","event":"request","requestId":"ba2751b8f60ca81950afbc27330d73fc","method":"GET","route":"static","status":200,"durationMs":1.07,"errCode":null}
+{"ts":"2026-10-20T13:48:01.099Z","level":"INFO","event":"request","requestId":"d161551e9ead3ec078d75d66158f5df7","method":"GET","route":"static","status":200,"durationMs":2.31,"errCode":null}
+{"ts":"2026-10-20T13:48:01.099Z","level":"INFO","event":"request","requestId":"349e0880e26b5401c55a61a438cb3404","method":"GET","route":"static","status":200,"durationMs":2.37,"errCode":null}
+{"ts":"2026-10-20T13:48:01.100Z","level":"INFO","event":"request","requestId":"648542b7d296455369c384415f7e00cc","method":"GET","route":"static","status":200,"durationMs":2.07,"errCode":null}
+{"ts":"2026-10-20T13:48:01.100Z","level":"INFO","event":"request","requestId":"e4583c6003bd2207b2d25ef21af086b1","method":"GET","route":"static","status":200,"durationMs":1.94,"errCode":null}
+{"ts":"2026-10-20T13:48:01.100Z","level":"INFO","event":"request","requestId":"3195b8ec5d1190650abe07c7b3573d65","method":"GET","route":"static","status":200,"durationMs":1.46,"errCode":null}
+{"ts":"2026-10-20T13:48:01.104Z","level":"INFO","event":"request","requestId":"2683a086a2602cbd3671476cf74e4642","method":"GET","route":"static","status":200,"durationMs":1.04,"errCode":null}
+{"ts":"2026-10-20T13:48:01.104Z","level":"INFO","event":"request","requestId":"cdf93c3fd9c3fbd7b058707acc01a17b","method":"GET","route":"static","status":200,"durationMs":1.54,"errCode":null}
+{"ts":"2026-10-20T13:48:01.104Z","level":"INFO","event":"request","requestId":"0654bc31dd4158bf9cdfb92d26832386","method":"GET","route":"static","status":200,"durationMs":1.73,"errCode":null}
+{"ts":"2026-10-20T13:48:01.108Z","level":"INFO","event":"request","requestId":"7234b04fc6fcf55861722109e7e93ca7","method":"GET","route":"static","status":200,"durationMs":0.53,"errCode":null}
+{"ts":"2026-10-20T13:48:01.112Z","level":"WARNING","event":"request","requestId":"3050d6fcca6d2c3a6e205e6768e99c01","method":"GET","route":"GET /api/v1/auth/me","status":401,"durationMs":1.88,"errCode":"AUTH_REQUIRED"}
+{"ts":"2026-10-20T13:48:01.306Z","level":"INFO","event":"request","requestId":"de9c04beec6fdccce75bda8fe723bbcc","method":"POST","route":"POST /api/v1/auth/login","status":200,"durationMs":49.34,"errCode":null}
+{"ts":"2026-10-20T13:48:01.310Z","level":"INFO","event":"request","requestId":"4cf6646d3951a376062a4a12abd3fa6a","method":"GET","route":"GET /api/v1/auth/me","status":200,"durationMs":2.16,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:01.320Z","level":"INFO","event":"request","requestId":"6d2f161fa703abc1d3f612e9ef29a481","method":"GET","route":"GET /api/v1/plans","status":200,"durationMs":7.14,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:01.475Z","level":"INFO","event":"request","requestId":"7d8221b2430ef39896ab41c9fc163112","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":200,"durationMs":9.04,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:01.701Z","level":"INFO","event":"request","requestId":"59527201fa865307b1dbd8a4d1ed62ad","method":"POST","route":"POST /api/v1/plans/{plan_id}/share","status":201,"durationMs":11.01,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:01.860Z","level":"INFO","event":"request","requestId":"9e593531817dda435bd4b65a855d2dde","method":"GET","route":"static","status":200,"durationMs":0.65,"errCode":null}
+{"ts":"2026-10-20T13:48:01.865Z","level":"INFO","event":"request","requestId":"4b87fdc8aadbf9796625b8e56132c5f1","method":"GET","route":"static","status":200,"durationMs":1.1,"errCode":null}
+{"ts":"2026-10-20T13:48:01.865Z","level":"INFO","event":"request","requestId":"82b8df107cd32c9e7aaabea93873a8ec","method":"GET","route":"static","status":200,"durationMs":1.44,"errCode":null}
+{"ts":"2026-10-20T13:48:01.871Z","level":"INFO","event":"request","requestId":"0dc1beaa4dcd1760cd01d3e3eb77e40a","method":"GET","route":"static","status":200,"durationMs":1.81,"errCode":null}
+{"ts":"2026-10-20T13:48:01.871Z","level":"INFO","event":"request","requestId":"3f46c32a0b047ed4abcd0accdb946ff0","method":"GET","route":"static","status":200,"durationMs":1.52,"errCode":null}
+{"ts":"2026-10-20T13:48:01.871Z","level":"INFO","event":"request","requestId":"cae73930df1a3056af47dfb620aecf63","method":"GET","route":"static","status":200,"durationMs":1.79,"errCode":null}
+{"ts":"2026-10-20T13:48:01.871Z","level":"INFO","event":"request","requestId":"e2a416109fbc2df37e7badd011c3a10a","method":"GET","route":"static","status":200,"durationMs":2.03,"errCode":null}
+{"ts":"2026-10-20T13:48:01.871Z","level":"INFO","event":"request","requestId":"cb8b737c8f10b29c3852ac1eb616192d","method":"GET","route":"static","status":200,"durationMs":1.95,"errCode":null}
+{"ts":"2026-10-20T13:48:01.875Z","level":"INFO","event":"request","requestId":"7f082737ebc12b27b7c0c8b8763667bc","method":"GET","route":"static","status":200,"durationMs":1.45,"errCode":null}
+{"ts":"2026-10-20T13:48:01.876Z","level":"INFO","event":"request","requestId":"01a59218f12824490b802924f7f59da7","method":"GET","route":"static","status":200,"durationMs":1.43,"errCode":null}
+{"ts":"2026-10-20T13:48:01.876Z","level":"INFO","event":"request","requestId":"e0f9252124833221e4c749b3f44bff2c","method":"GET","route":"static","status":200,"durationMs":1.21,"errCode":null}
+{"ts":"2026-10-20T13:48:01.879Z","level":"INFO","event":"request","requestId":"81450ba03edf9dc91554ea264bc539cb","method":"GET","route":"static","status":200,"durationMs":0.66,"errCode":null}
+{"ts":"2026-10-20T13:48:01.889Z","level":"INFO","event":"request","requestId":"505a9501f7993e00ac366b26bca9dcad","method":"GET","route":"GET /api/v1/share/{token}","status":200,"durationMs":7.68,"errCode":null}
+{"ts":"2026-10-20T13:48:02.063Z","level":"INFO","event":"request","requestId":"f64c9e58b1d38121c5c8fdcd9827f474","method":"GET","route":"static","status":200,"durationMs":0.52,"errCode":null}
+{"ts":"2026-10-20T13:48:03.774Z","level":"INFO","event":"request","requestId":"a2d8a4d67091c8eba8347a6728bbe987","method":"GET","route":"GET /api/v1/share/{token}/export.csv","status":200,"durationMs":7.89,"errCode":null}
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56732)
+Traceback (most recent call last):
+  File "C:\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 487, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 453, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+----------------------------------------
+{"ts":"2026-10-20T13:48:08.789Z","level":"INFO","event":"request","requestId":"a8f68711d979f7e2d6ef6aafbec1fddb","method":"GET","route":"static","status":200,"durationMs":0.39,"errCode":null}
+{"ts":"2026-10-20T13:48:08.791Z","level":"INFO","event":"request","requestId":"902fd24dd9c5185616bacda432614fb4","method":"GET","route":"GET /api/v1/catalog","status":200,"durationMs":1.36,"errCode":null}
+{"ts":"2026-10-20T13:48:08.835Z","level":"INFO","event":"request","requestId":"31813ab5e244113f4587bba415ffddb1","method":"POST","route":"POST /api/v1/auth/register","status":201,"durationMs":42.74,"errCode":null}
+{"ts":"2026-10-20T13:48:08.898Z","level":"INFO","event":"request","requestId":"7c8d390a649c41bc847b1dfbda035fb3","method":"POST","route":"POST /api/v1/auth/login","status":200,"durationMs":41.05,"errCode":null}
+{"ts":"2026-10-20T13:48:08.901Z","level":"INFO","event":"request","requestId":"8b6a86cde965f5b51705b2b1f7748def","method":"GET","route":"GET /api/v1/auth/me","status":200,"durationMs":1.6,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:08.926Z","level":"INFO","event":"request","requestId":"d61346c6af96451e304bccc0a56a26c1","method":"GET","route":"GET /api/v1/plans","status":200,"durationMs":6.25,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:08.959Z","level":"INFO","event":"request","requestId":"4e7d123856eb8d5d74ff6b65677d3557","method":"POST","route":"POST /api/v1/plans","status":201,"durationMs":8.48,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:08.962Z","level":"INFO","event":"request","requestId":"7359453dc51287c7e92e69f8a17367b2","method":"GET","route":"GET /api/v1/sample","status":200,"durationMs":1.98,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:08.973Z","level":"INFO","event":"request","requestId":"add76f1ab113738f40185e2b5fb00c87","method":"PUT","route":"PUT /api/v1/plans/{plan_id}","status":200,"durationMs":10.54,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:09.004Z","level":"INFO","event":"request","requestId":"6435ca1e11efe712eeb471f2a23ab0d7","method":"GET","route":"GET /api/v1/plans/{plan_id}/export.csv","status":200,"durationMs":7.01,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:09.036Z","level":"INFO","event":"request","requestId":"f55ec2cf66ef4611d92f8687c849fb05","method":"POST","route":"POST /api/v1/plans/{plan_id}/share","status":201,"durationMs":7.08,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:09.044Z","level":"INFO","event":"request","requestId":"d2cde7d6d70585e0aeeb7931900eb317","method":"GET","route":"GET /api/v1/share/{token}","status":200,"durationMs":6.89,"errCode":null}
+{"ts":"2026-10-20T13:48:09.067Z","level":"INFO","event":"request","requestId":"a0864d948d3e47566e6bc88afbccbb80","method":"GET","route":"GET /api/v1/share/{token}/export.csv","status":200,"durationMs":6.64,"errCode":null}
+{"ts":"2026-10-20T13:48:09.093Z","level":"WARNING","event":"request","requestId":"0efabaca1cfe482c2bfb4b8016d14e80","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":401,"durationMs":1.61,"errCode":"AUTH_REQUIRED"}
+{"ts":"2026-10-20T13:48:09.112Z","level":"INFO","event":"request","requestId":"2b17c3c7d7e1038ee973c0c8896b6c92","method":"GET","route":"GET /api/v1/share/{token}","status":404,"durationMs":5.84,"errCode":"NOT_FOUND"}
+{"ts":"2026-10-20T13:48:09.137Z","level":"WARNING","event":"request","requestId":"a820dc4effd2ccb1a6a57721f1112965","method":"PUT","route":"unmatched","status":405,"durationMs":0.16,"errCode":"METHOD_NOT_ALLOWED"}
+{"ts":"2026-10-20T13:48:09.183Z","level":"INFO","event":"request","requestId":"8e44834366794b0a14b5cfc3be27c6c6","method":"POST","route":"POST /api/v1/auth/register","status":201,"durationMs":44.67,"errCode":null}
+{"ts":"2026-10-20T13:48:09.227Z","level":"INFO","event":"request","requestId":"944e67a49f1538fac2fe75d6149ad95b","method":"POST","route":"POST /api/v1/auth/login","status":200,"durationMs":43.3,"errCode":null}
+{"ts":"2026-10-20T13:48:09.237Z","level":"INFO","event":"request","requestId":"18cc68aaa862610ccd60107bf7d30b48","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":404,"durationMs":9.58,"errCode":"NOT_FOUND","userId":3}
+{"ts":"2026-10-20T13:48:09.246Z","level":"INFO","event":"request","requestId":"ea53df97632d44fa6fd118ee72231a7a","method":"PUT","route":"PUT /api/v1/plans/{plan_id}","status":404,"durationMs":8.03,"errCode":"NOT_FOUND","userId":3}
+{"ts":"2026-10-20T13:48:09.266Z","level":"WARNING","event":"request","requestId":"f71a45187f8f59a14b06cb44bc44a7b2","method":"PUT","route":"PUT /api/v1/plans/{plan_id}","status":409,"durationMs":6.86,"errCode":"CONFLICT_REVISION","userId":2}
+{"ts":"2026-10-20T13:48:09.268Z","level":"WARNING","event":"request","requestId":"d2c857aecc299fdb7b4c994142108b49","method":"POST","route":"POST /api/v1/plans","status":403,"durationMs":1.23,"errCode":"FORBIDDEN","userId":2}
+{"ts":"2026-10-20T13:48:09.278Z","level":"WARNING","event":"request","requestId":"4fbfcf9ab6c14dbed2ea23212a8bba2c","method":"PUT","route":"PUT /api/v1/plans/{plan_id}","status":422,"durationMs":9.01,"errCode":"UNSUPPORTED_SCHEMA_VERSION","userId":2}
+{"ts":"2026-10-20T13:48:09.279Z","level":"WARNING","event":"request","requestId":"1053e9763296670b04cbacb6e2302bae","method":"POST","route":"unmatched","status":413,"durationMs":0.1,"errCode":"PAYLOAD_TOO_LARGE"}
+{"ts":"2026-10-20T13:48:09.288Z","level":"INFO","event":"request","requestId":"71650d5bfc16201949dcf4d6b3706d30","method":"GET","route":"GET /api/v1/plans","status":200,"durationMs":8.9,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:09.308Z","level":"WARNING","event":"request","requestId":"100d3a373e3ef0a45bdbbd506b704cb6","method":"GET","route":"GET /api/v1/plans","status":422,"durationMs":1.68,"errCode":"VALIDATION_FAILED","userId":2}
+{"ts":"2026-10-20T13:48:09.329Z","level":"INFO","event":"request","requestId":"4c7e69c976b6c81f8f96fcb5eb22d809","method":"POST","route":"POST /api/v1/plans","status":201,"durationMs":18.97,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:09.342Z","level":"INFO","event":"request","requestId":"135641e39658a7f08bd81de89db97796","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":200,"durationMs":11.2,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:09.353Z","level":"INFO","event":"request","requestId":"92215d563709dceb2862e8de00c4925f","method":"GET","route":"GET /api/v1/plans/{plan_id}/export.csv","status":200,"durationMs":8.81,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:09.494Z","level":"INFO","event":"startup","host":"127.0.0.1","port":8080,"dataDir":"C:\\Users\\MLoong\\AppData\\Local\\Temp\\kujiale-accept-vh4it2hu","dbPath":"C:\\Users\\MLoong\\AppData\\Local\\Temp\\kujiale-accept-vh4it2hu\\kujiale.db","staticDir":"D:\\work\\项目\\酷家乐\\web","logLevel":"INFO","sessionTtlHours":168,"secureCookie":false}
+{"ts":"2026-10-20T13:48:09.502Z","level":"INFO","event":"listening","url":"http://127.0.0.1:8080","host":"127.0.0.1","port":8080,"schemaVersion":1,"dataDir":"C:\\Users\\MLoong\\AppData\\Local\\Temp\\kujiale-accept-vh4it2hu","staticDir":"D:\\work\\项目\\酷家乐\\web","staticInstalled":true}
+{"ts":"2026-10-20T13:48:09.866Z","level":"INFO","event":"request","requestId":"b25ec03a9806c5da854385badb3fefb9","method":"GET","route":"GET /api/v1/catalog","status":200,"durationMs":1.62,"errCode":null}
+{"ts":"2026-10-20T13:48:09.912Z","level":"INFO","event":"request","requestId":"f8d0bea813e3d035402e742ebb1d5a8a","method":"POST","route":"POST /api/v1/auth/login","status":200,"durationMs":44.34,"errCode":null}
+{"ts":"2026-10-20T13:48:09.932Z","level":"INFO","event":"request","requestId":"c854b4b7177f664a7e458cf3e84206e8","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":200,"durationMs":6.58,"errCode":null,"userId":2}
+{"ts":"2026-10-20T13:48:09.938Z","level":"INFO","event":"request","requestId":"1103ea7f087bd82bfbf8a2e286110f78","method":"GET","route":"GET /api/v1/share/{token}","status":200,"durationMs":5.81,"errCode":null}
+{"ts":"2026-10-20T13:48:10.237Z","level":"INFO","event":"request","requestId":"1d62842335dae175af72a23537601b2f","method":"GET","route":"static","status":200,"durationMs":0.76,"errCode":null}
+{"ts":"2026-10-20T13:48:10.244Z","level":"INFO","event":"request","requestId":"4dd5f0ce63ccbdd8c884081c753b95e8","method":"GET","route":"static","status":200,"durationMs":0.7,"errCode":null}
+{"ts":"2026-10-20T13:48:10.245Z","level":"INFO","event":"request","requestId":"43139561fcaca83d66fb9c23435de099","method":"GET","route":"static","status":200,"durationMs":0.96,"errCode":null}
+{"ts":"2026-10-20T13:48:10.249Z","level":"INFO","event":"request","requestId":"538fcab654a85bdb5e0a16069d5f06b7","method":"GET","route":"static","status":200,"durationMs":1.7,"errCode":null}
+{"ts":"2026-10-20T13:48:10.249Z","level":"INFO","event":"request","requestId":"3ae05767157145e0f43c62663dca6199","method":"GET","route":"static","status":200,"durationMs":2.05,"errCode":null}
+{"ts":"2026-10-20T13:48:10.250Z","level":"INFO","event":"request","requestId":"3a4a67a080d145cd41df5a80bf412fca","method":"GET","route":"static","status":200,"durationMs":1.68,"errCode":null}
+{"ts":"2026-10-20T13:48:10.250Z","level":"INFO","event":"request","requestId":"dc1ba32f976766ae79a2d359daccca2b","method":"GET","route":"static","status":200,"durationMs":1.42,"errCode":null}
+{"ts":"2026-10-20T13:48:10.250Z","level":"INFO","event":"request","requestId":"af5de2a4210a17b68ce920684512f094","method":"GET","route":"static","status":200,"durationMs":0.97,"errCode":null}
+{"ts":"2026-10-20T13:48:10.253Z","level":"INFO","event":"request","requestId":"72ea66013f964823e97a177049490092","method":"GET","route":"static","status":200,"durationMs":1.14,"errCode":null}
+{"ts":"2026-10-20T13:48:10.253Z","level":"INFO","event":"request","requestId":"94453d92ea94552194f638f4202475ab","method":"GET","route":"static","status":200,"durationMs":1.16,"errCode":null}
+{"ts":"2026-10-20T13:48:10.253Z","level":"INFO","event":"request","requestId":"3955ea9069b8fbe8fbe83908ce6388db","method":"GET","route":"static","status":200,"durationMs":0.96,"errCode":null}
+{"ts":"2026-10-20T13:48:10.256Z","level":"INFO","event":"request","requestId":"b5d6ff4ee567792aade89094cdb2e74a","method":"GET","route":"static","status":200,"durationMs":0.42,"errCode":null}
+{"ts":"2026-10-20T13:48:10.261Z","level":"WARNING","event":"request","requestId":"94b099dd0464e6f9fdb580d9fdf1d9c2","method":"GET","route":"GET /api/v1/auth/me","status":401,"durationMs":1.64,"errCode":"AUTH_REQUIRED"}
+{"ts":"2026-10-20T13:48:10.452Z","level":"INFO","event":"request","requestId":"53a5e130df975f1fbec5dc7a997b1625","method":"POST","route":"POST /api/v1/auth/login","status":200,"durationMs":43.72,"errCode":null}
+{"ts":"2026-10-20T13:48:10.456Z","level":"INFO","event":"request","requestId":"dd31e850b7081c17fcaac7e518c4158e","method":"GET","route":"GET /api/v1/auth/me","status":200,"durationMs":2.22,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:10.468Z","level":"INFO","event":"request","requestId":"200de80a74829f651411b177e9aecfb1","method":"GET","route":"GET /api/v1/plans","status":200,"durationMs":8.14,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:10.585Z","level":"INFO","event":"request","requestId":"3490bdcf13702d216f8b4428ff2243d0","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":200,"durationMs":7.58,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:10.608Z","level":"INFO","event":"request","requestId":"26584f57fcc6f65d9e1aa396a3abaf96","method":"GET","route":"GET /api/v1/catalog","status":200,"durationMs":1.59,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:10.752Z","level":"INFO","event":"request","requestId":"076caba91df0491eefab0a07e60c9c6e","method":"GET","route":"GET /api/v1/plans/{plan_id}","status":200,"durationMs":6.68,"errCode":null,"userId":1}
+{"ts":"2026-10-20T13:48:16.420Z","level":"INFO","event":"request","requestId":"2c16c32d06b1d596723d425922def565","method":"GET","route":"static","status":200,"durationMs":0.52,"errCode":null}
+{"ts":"2026-10-20T13:48:16.428Z","level":"INFO","event":"request","requestId":"1bbf7d42154ce9525c4c6462afaabef2","method":"GET","route":"static","status":200,"durationMs":1.22,"errCode":null}
+{"ts":"2026-10-20T13:48:16.428Z","level":"INFO","event":"request","requestId":"12b4e9f08475968a6f1fff5cca383e06","method":"GET","route":"static","status":200,"durationMs":1.17,"errCode":null}
+{"ts":"2026-10-20T13:48:16.441Z","level":"INFO","event":"request","requestId":"dff0b85dc5290a0f25c581959fac80e5","method":"GET","route":"static","status":200,"durationMs":2.25,"errCode":null}
+{"ts":"2026-10-20T13:48:16.442Z","level":"INFO","event":"request","requestId":"fd51c17ab56fbe0e7a88dc5490222054","method":"GET","route":"static","status":200,"durationMs":2.18,"errCode":null}
+{"ts":"2026-10-20T13:48:16.442Z","level":"INFO","event":"request","requestId":"085d03270593aaf168cea41051025f40","method":"GET","route":"static","status":200,"durationMs":2.05,"errCode":null}
+{"ts":"2026-10-20T13:48:16.442Z","level":"INFO","event":"request","requestId":"7158745df6a0ce840fc66375d77c009d","method":"GET","route":"static","status":200,"durationMs":1.75,"errCode":null}
+{"ts":"2026-10-20T13:48:16.442Z","level":"INFO","event":"request","requestId":"9320a3444f8dab618e7ce180894b73d1","method":"GET","route":"static","status":200,"durationMs":1.4,"errCode":null}
+{"ts":"2026-10-20T13:48:16.455Z","level":"INFO","event":"request","requestId":"77c0d97255ccddf984a8c69d4c2a7a36","method":"GET","route":"static","status":200,"durationMs":1.31,"errCode":null}
+{"ts":"2026-10-20T13:48:16.455Z","level":"INFO","event":"request","requestId":"31fd800e8a238de395d123e2a746ce0c","method":"GET","route":"static","status":200,"durationMs":1.29,"errCode":null}
+{"ts":"2026-10-20T13:48:16.455Z","level":"INFO","event":"request","requestId":"9ed9a5657a08287c6ec4127d93a510dc","method":"GET","route":"static","status":200,"durationMs":1.66,"errCode":null}
+{"ts":"2026-10-20T13:48:16.458Z","level":"INFO","event":"request","requestId":"910ef3b945b0ef96803b2f6f188981c5","method":"GET","route":"static","status":200,"durationMs":0.59,"errCode":null}
+{"ts":"2026-10-20T13:48:16.462Z","level":"WARNING","event":"request","requestId":"9566811f72b362d9994bf287a6949cbd","method":"GET","route":"GET /api/v1/auth/me","status":401,"durationMs":1.93,"errCode":"AUTH_REQUIRED"}
+{"ts":"2026-10-20T13:48:16.878Z","level":"INFO","event":"request","requestId":"a1cf073a2d0b89d0063216fe16c4ccc2","method":"GET","route":"static","status":200,"durationMs":0.88,"errCode":null}
+{"ts":"2026-10-20T13:48:16.887Z","level":"INFO","event":"request","requestId":"9128f7f0db824ba781887fc3c8525835","method":"GET","route":"static","status":200,"durationMs":0.92,"errCode":null}
+{"ts":"2026-10-20T13:48:16.887Z","level":"INFO","event":"request","requestId":"b5974140026c97e3c6fdd2be7ef892ef","method":"GET","route":"static","status":200,"durationMs":1.29,"errCode":null}
+{"ts":"2026-10-20T13:48:16.901Z","level":"INFO","event":"request","requestId":"96406f6195fb28e5e21c9609c87dcac7","method":"GET","route":"static","status":200,"durationMs":1.93,"errCode":null}
+{"ts":"2026-10-20T13:48:16.902Z","level":"INFO","event":"request","requestId":"1c7925ebaebd8f14da8db083b14d7e4c","method":"GET","route":"static","status":200,"durationMs":2.48,"errCode":null}
+{"ts":"2026-10-20T13:48:16.902Z","level":"INFO","event":"request","requestId":"0f5b6262b11516eabf9be3a68fcd19ce","method":"GET","route":"static","status":200,"durationMs":1.09,"errCode":null}
+{"ts":"2026-10-20T13:48:16.903Z","level":"INFO","event":"request","requestId":"e8887e15a201e29113cb5cdb650245f6","method":"GET","route":"static","status":200,"durationMs":2.31,"errCode":null}
+{"ts":"2026-10-20T13:48:16.903Z","level":"INFO","event":"request","requestId":"637388c5999368e7a7a0f96c1a892844","method":"GET","route":"static","status":200,"durationMs":1.87,"errCode":null}
+{"ts":"2026-10-20T13:48:16.915Z","level":"INFO","event":"request","requestId":"ef73f7c22c2f313bff4fbae5c6b223be","method":"GET","route":"static","status":200,"durationMs":1.23,"errCode":null}
+{"ts":"2026-10-20T13:48:16.915Z","level":"INFO","event":"request","requestId":"c362e6de4da9c11ece86564690d47815","method":"GET","route":"static","status":200,"durationMs":1.51,"errCode":null}
+{"ts":"2026-10-20T13:48:16.915Z","level":"INFO","event":"request","requestId":"96548830c1462ad2e211d5715bf46783","method":"GET","route":"static","status":200,"durationMs":1.75,"errCode":null}
+{"ts":"2026-10-20T13:48:16.918Z","level":"INFO","event":"request","requestId":"0d08205e253c26f74b5496a10ed760df","method":"GET","route":"static","status":200,"durationMs":0.39,"errCode":null}
+{"ts":"2026-10-20T13:48:16.931Z","level":"INFO","event":"request","requestId":"a25e1ecceb1cff26d2d4f4661097de5c","method":"GET","route":"GET /api/v1/share/{token}","status":200,"durationMs":9.78,"errCode":null}
+{"ts":"2026-10-20T13:48:16.951Z","level":"INFO","event":"request","requestId":"fcef1d5342dfee74fc2ada397d2597a8","method":"GET","route":"GET /api/v1/catalog","status":200,"durationMs":2.76,"errCode":null}
+{"ts":"2026-10-20T13:48:17.371Z","level":"INFO","event":"request","requestId":"e2cde351b3086da748ceb78e8b7f001b","method":"GET","route":"static","status":200,"durationMs":0.44,"errCode":null}
+{"ts":"2026-10-20T13:48:17.379Z","level":"INFO","event":"request","requestId":"3251f123e0b2433622b9568cfa181d3d","method":"GET","route":"static","status":200,"durationMs":0.79,"errCode":null}
+{"ts":"2026-10-20T13:48:17.379Z","level":"INFO","event":"request","requestId":"4b6dbeb21ad28057c874d0460c5d3035","method":"GET","route":"static","status":200,"durationMs":1.14,"errCode":null}
+{"ts":"2026-10-20T13:48:17.393Z","level":"INFO","event":"request","requestId":"5378ff64c33ed4c82c6384f1329a2c9f","method":"GET","route":"static","status":200,"durationMs":2.03,"errCode":null}
+{"ts":"2026-10-20T13:48:17.394Z","level":"INFO","event":"request","requestId":"c2854335bdcb69ba099b89b28f9929a2","method":"GET","route":"static","status":200,"durationMs":1.73,"errCode":null}
+{"ts":"2026-10-20T13:48:17.394Z","level":"INFO","event":"request","requestId":"bf82a583abf587d4dc42b1294fd9e981","method":"GET","route":"static","status":200,"durationMs":2.32,"errCode":null}
+{"ts":"2026-10-20T13:48:17.394Z","level":"INFO","event":"request","requestId":"b48b2e27986dadcce4bcea581147aced","method":"GET","route":"static","status":200,"durationMs":1.7,"errCode":null}
+{"ts":"2026-10-20T13:48:17.394Z","level":"INFO","event":"request","requestId":"ea37bdf7ae654cf186dc9b749df09dd0","method":"GET","route":"static","status":200,"durationMs":1.2,"errCode":null}
+{"ts":"2026-10-20T13:48:17.407Z","level":"INFO","event":"request","requestId":"60662223ccda3835dabce192dbbfcfec","method":"GET","route":"static","status":200,"durationMs":1.55,"errCode":null}
+{"ts":"2026-10-20T13:48:17.407Z","level":"INFO","event":"request","requestId":"30145d6da93ff3b8201101d6afa82e19","method":"GET","route":"static","status":200,"durationMs":1.49,"errCode":null}
+{"ts":"2026-10-20T13:48:17.407Z","level":"INFO","event":"request","requestId":"6efd27bbea654a8631a2e16b652d690b","method":"GET","route":"static","status":200,"durationMs":1.5,"errCode":null}
+{"ts":"2026-10-20T13:48:17.409Z","level":"INFO","event":"request","requestId":"5535446eadc0c4de689230b7e43474e9","method":"GET","route":"static","status":200,"durationMs":0.43,"errCode":null}
+{"ts":"2026-10-20T13:48:17.414Z","level":"WARNING","event":"request","requestId":"017823bc4808e45a69024de2a9a5c655","method":"GET","route":"GET /api/v1/auth/me","status":401,"durationMs":1.73,"errCode":"AUTH_REQUIRED"}

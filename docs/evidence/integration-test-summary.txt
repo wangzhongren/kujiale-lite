@@ -1,0 +1,11 @@
+# integration test matrix
+
+generated: 2026-10-20T12:54:03Z
+
+backend: python -m unittest discover -s tests -v
+  exit=0; backend unittest: exit=0 OK (python -m unittest discover -s tests -v)
+
+frontend: node --test --test-reporter=spec tests\frontend\catalog-api.test.js tests\frontend\geometry.test.js tests\frontend\store.test.js tests\frontend\undo.test.js
+  exit=0; frontend node:test: exit=0 OK (4 files, 35 expected)
+
+Both suites are green; no assertions were weakened.

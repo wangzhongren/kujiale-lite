@@ -1,0 +1,5 @@
+# startup events (both runs)
+startup ts=2026-10-20T12:23:12.148Z url=- dataDir=D:\work\项目\酷家乐\data staticInstalled=-
+listening ts=2026-10-20T12:23:12.155Z url=http://127.0.0.1:8080 dataDir=D:\work\项目\酷家乐\data staticInstalled=True
+startup ts=2026-10-20T12:23:13.553Z url=- dataDir=D:\work\项目\酷家乐\data staticInstalled=-
+listening ts=2026-10-20T12:23:13.560Z url=http://127.0.0.1:8080 dataDir=D:\work\项目\酷家乐\data staticInstalled=True

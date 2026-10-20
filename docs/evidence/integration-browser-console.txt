@@ -1,0 +1,20 @@
+SHOT integration-login.png
+SHOT integration-empty-list.png
+PASS UI register -> empty plan list
+PASS sample plan opened in 2D editor
+SHOT integration-editor-2d.png
+PASS 2D edit: Delete wall (7->6), Ctrl+Z restores 7
+PASS 2D edit: material change marks document dirty
+PASS 3D view uses the same document (7 walls / 2 rooms / 7 furniture)
+SHOT integration-editor-3d.png
+PASS save through real API
+PASS CSV download: UTF-8 BOM + CRLF
+PASS CSV download: 12.00/9.00 room areas
+PASS share link generated in UI
+SHOT integration-list.png
+PASS list reopen: same 7 walls / 2 rooms
+PASS anonymous share page: 2D read-only document
+PASS share page has no edit controls
+SHOT integration-share-2d.png
+PASS share page: 3D uses the same document
+SHOT integration-share-3d.png

@@ -1,0 +1,59 @@
+# backend real-start demo transcript
+
+started at 2026-10-20T12:23:12Z
+command: python -m app --port 8080
+address: http://127.0.0.1:8080
+python: 3.14.0 platform=win32
+
+server ready (GET /api/v1/catalog -> 200)
+
+public catalog                     GET    /api/v1/catalog                            -> 200 requestId=64e46ebfc16d0ca638086bf5ce6e6820
+catalog size: furniture=12 materials=8
+register demo user                 POST   /api/v1/auth/register                      -> 201 requestId=07b7bc2f05d68195329d7cf55bb67726
+login demo user                    POST   /api/v1/auth/login                         -> 200 requestId=f1fb0b01722bbfed324e6aa79ae048ce
+session check                      GET    /api/v1/auth/me                            -> 200 requestId=edaadceff83cda420e1d27c9c43494e5
+anonymous plans -> 401             GET    /api/v1/plans                              -> 401 requestId=949cc296aea704fcf683ee19a7c41a5f err=AUTH_REQUIRED
+sample plan                        GET    /api/v1/sample                             -> 200 requestId=528fe651ba6cdfbc14a6c54c1833c71b
+create plan from sample            POST   /api/v1/plans                              -> 201 requestId=e02ed9a4844df3a8ffd7d371195a2992
+created plan id=2 revision=1 totalAreaM2=21.00 rooms=[客厅=12.00m2, 卧室=9.00m2]
+save plan (revision 1 -> 2)        PUT    /api/v1/plans/2                            -> 200 requestId=c60032ce65827a079525340867b973f0
+updated plan revision=2 totalAreaM2=21.00
+search own plans                   GET    /api/v1/plans?q=%E6%BC%94%E7%A4%BA%E6%88%B7%E5%9E%8B%201792498992 -> 200 requestId=a1f796ab7d8586e6b0b82a69375e0126
+register other user                POST   /api/v1/auth/register                      -> 201 requestId=259c3e8b0cd82f5ec3bccc78e6158a9a
+login other user                   POST   /api/v1/auth/login                         -> 200 requestId=4861e3af3c5e90557bc2efd7672d3bb7
+cross-user read -> 404             GET    /api/v1/plans/2                            -> 404 requestId=cde907b2aa5ed3174ae71f781014ca04 err=NOT_FOUND
+cross-user write -> 404            PUT    /api/v1/plans/2                            -> 404 requestId=5447fbad72cfbdda8a7a90d34dc89858 err=NOT_FOUND
+cross-user share -> 404            POST   /api/v1/plans/2/share                      -> 404 requestId=3d758278db13b8449d7974169f5d6ed0 err=NOT_FOUND
+missing CSRF -> 403                PUT    /api/v1/plans/2                            -> 403 requestId=1af5bf4123afbb2e09180f0f02bb131a err=FORBIDDEN
+stale revision -> 409              PUT    /api/v1/plans/2                            -> 409 requestId=70abdeddcbae41f63a894b944acd17b1 err=CONFLICT_REVISION
+invalid share -> 404               GET    /api/v1/share/not-a-valid-token            -> 404 requestId=b5ca9296aa881691348c0db165b7cd99 err=NOT_FOUND
+issue share link                   POST   /api/v1/plans/2/share                      -> 201 requestId=2c821de778889d5ccfca5921da142143
+anonymous share view               GET    /api/v1/share/[redacted] -> 200 requestId=6db30a44b18de0615ab3b599b2089a74
+share write -> 405                 PUT    /api/v1/share/[redacted] -> 405 requestId=5044483221303ce366f70f2f0276fa91 err=METHOD_NOT_ALLOWED
+owner CSV export                   GET    /api/v1/plans/2/export.csv                 -> 200 requestId=6153ad6d2b0e4b6a5b4e6506afcec44d
+shared CSV export                  GET    /api/v1/share/[redacted]/export.csv -> 200 requestId=de0070aee3e644e49a33448353c89d93
+CSV bytes=211 bom=True crlf=True
+revoke share                       DELETE /api/v1/plans/2/share                      -> 204 requestId=4e0b2c8254eb1d371222d9008d0406dd
+revoked share -> 404               GET    /api/v1/share/[redacted] -> 404 requestId=cd76585fbfa705664c23e9456b03bed0 err=NOT_FOUND
+issue share for restart            POST   /api/v1/plans/2/share                      -> 201 requestId=92c1f909f504b9ef3d57eb4b56f2acf7
+register rate-limit user           POST   /api/v1/auth/register                      -> 201 requestId=3807997df373b75fc94759610d35d23a
+bad login 1 -> 401                 POST   /api/v1/auth/login                         -> 401 requestId=efab8759df6387595872616f7ce743cd err=AUTH_INVALID_CREDENTIALS
+bad login 2 -> 401                 POST   /api/v1/auth/login                         -> 401 requestId=1dcd3d075a3bcbe6f57e522346309cfc err=AUTH_INVALID_CREDENTIALS
+bad login 3 -> 401                 POST   /api/v1/auth/login                         -> 401 requestId=f55e48aa13007c430d0e8afab9d81ca7 err=AUTH_INVALID_CREDENTIALS
+bad login 4 -> 401                 POST   /api/v1/auth/login                         -> 401 requestId=adb53a535419de46ef67eab9d974e33c err=AUTH_INVALID_CREDENTIALS
+bad login 5 -> 401                 POST   /api/v1/auth/login                         -> 401 requestId=e9179289b45ca56d905f03354f7b293f err=AUTH_INVALID_CREDENTIALS
+rate limited -> 429                POST   /api/v1/auth/login                         -> 429 requestId=5cbaccb373cd7b9d39d6835024bf85f3 err=AUTH_RATE_LIMITED
+
+session before restart             GET    /api/v1/auth/me                            -> 200 requestId=232caff8245c186c75e84fdb2d28280d
+share before restart               GET    /api/v1/share/[redacted] -> 200 requestId=099da97ee56256e80eb06f89c5456851
+sqlite before stop: user_version=1 integrity_check=ok users=7 sessions=4 plans=2 shares=4
+
+--- forced stop (terminate) and cold restart ---
+server ready after restart
+session after restart              GET    /api/v1/auth/me                            -> 200 requestId=6a960b7b8e082d9905750c15fcfe8a19
+plan after restart                 GET    /api/v1/plans/2                            -> 200 requestId=4c6d9061f902e9c4e319aa6104396827
+share after restart                GET    /api/v1/share/[redacted] -> 200 requestId=ba4f4d9d88be02afe5c014b1e5eeb07b
+sqlite after restart: user_version=1 integrity_check=ok users=7 sessions=4 plans=2 shares=4
+log scan: PASS (43 lines, 14 negative-path request logs, no passwords/tokens/cookies)
+plan id=2 name='演示户型 1792498992' revision=2
+finished at 2026-10-20T12:23:13Z

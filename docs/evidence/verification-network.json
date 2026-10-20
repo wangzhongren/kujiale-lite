@@ -1,0 +1,396 @@
+{
+  "captured_at": "2026-10-20T13:28:45Z",
+  "note": "Share token paths are redacted; only method/path/status/requestId/durationMs are kept.",
+  "browser_network": [
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/auth/me",
+      "status": 401,
+      "requestId": "d07eee74934720a9b8f11378934ba8db",
+      "durationMs": 2
+    },
+    {
+      "method": "POST",
+      "path": "http://127.0.0.1:8080/api/v1/auth/register",
+      "status": 201,
+      "requestId": "763b8a0bccbeb434d2def19c3e1e581f",
+      "durationMs": 44
+    },
+    {
+      "method": "POST",
+      "path": "http://127.0.0.1:8080/api/v1/auth/login",
+      "status": 200,
+      "requestId": "a84f816d0a96575183bd8559fe196baf",
+      "durationMs": 42
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/auth/me",
+      "status": 200,
+      "requestId": "8ff51f0d0e31ef542d9538e2d5a031b4",
+      "durationMs": 2
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/plans?page=1&pageSize=20",
+      "status": 200,
+      "requestId": "b2369e39f4c0fedfac50844098ac2747",
+      "durationMs": 0
+    },
+    {
+      "method": "POST",
+      "path": "http://127.0.0.1:8080/api/v1/plans",
+      "status": 201,
+      "requestId": "c4abbb078003ee358a21cf87f4cdec9e",
+      "durationMs": 9
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/plans/1",
+      "status": 200,
+      "requestId": "0da57b9f829e3ea62b2d0c1958051258",
+      "durationMs": 7
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/catalog",
+      "status": 200,
+      "requestId": "e86ec7d3e73966623b577fd2e9b9a27d",
+      "durationMs": 12
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/plans/1",
+      "status": 200,
+      "requestId": "732f8382b6f1335ca676678b8252acd4",
+      "durationMs": 7
+    },
+    {
+      "method": "PUT",
+      "path": "http://127.0.0.1:8080/api/v1/plans/1",
+      "status": 200,
+      "requestId": "b1ee8ee00248b851c51b60835a9fa0c5",
+      "durationMs": 14
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/plans/1",
+      "status": 200,
+      "requestId": "98e85a1d7fb7cd1b89e0b681cced855a",
+      "durationMs": 7
+    },
+    {
+      "method": "POST",
+      "path": "http://127.0.0.1:8080/api/v1/auth/logout",
+      "status": 204,
+      "requestId": "ee68f28489b7022eef561833b68abf3a",
+      "durationMs": 9
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/auth/me",
+      "status": 401,
+      "requestId": "3bb66fc1a087e64b85b23484393f2bc6",
+      "durationMs": 0
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/auth/me",
+      "status": 401,
+      "requestId": "f0f06e636d6b9488c5b9b80d56621285",
+      "durationMs": 2
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/auth/me",
+      "status": 401,
+      "requestId": "5eed061f243111704194db556996826d",
+      "durationMs": 3
+    },
+    {
+      "method": "POST",
+      "path": "http://127.0.0.1:8080/api/v1/auth/login",
+      "status": 200,
+      "requestId": "387451c6ae36fab24f9110845a3956c3",
+      "durationMs": 47
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/auth/me",
+      "status": 200,
+      "requestId": "31bc8965d7414d5fe396cf4e5f32467d",
+      "durationMs": 2
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/plans?page=1&pageSize=20",
+      "status": 200,
+      "requestId": "2bb644c5fafa5775b478da87707165b2",
+      "durationMs": 0
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/plans/1",
+      "status": 200,
+      "requestId": "0c32926d7872b2f9552b9727a8ddc148",
+      "durationMs": 5
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/catalog",
+      "status": 200,
+      "requestId": "e86ec7d3e73966623b577fd2e9b9a27d",
+      "durationMs": 0
+    },
+    {
+      "method": "POST",
+      "path": "http://127.0.0.1:8080/api/v1/plans/1/share",
+      "status": 201,
+      "requestId": "2444a458e35abbac91f61b9325d86b88",
+      "durationMs": 9
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/share/[redacted]",
+      "status": 200,
+      "requestId": "98fe4298b03b10a708f829d26670057a",
+      "durationMs": 7
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/catalog",
+      "status": 200,
+      "requestId": "e86ec7d3e73966623b577fd2e9b9a27d",
+      "durationMs": 1
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/share/[redacted]/export.csv",
+      "status": 200,
+      "requestId": "e445d6ee20a9f386bf021e3cc08e26ef",
+      "durationMs": 8
+    }
+  ],
+  "restart_network": [
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/auth/me",
+      "status": 401,
+      "requestId": "4e5f6b9e83bf7c9ed7b7481ba6caac17",
+      "durationMs": 2
+    },
+    {
+      "method": "POST",
+      "path": "http://127.0.0.1:8080/api/v1/auth/login",
+      "status": 200,
+      "requestId": "9a61ffe30b61a3a88cb34f7cdfefc484",
+      "durationMs": 42
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/auth/me",
+      "status": 200,
+      "requestId": "48f03fe4b313763534ac81652730841f",
+      "durationMs": 3
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/plans?page=1&pageSize=20",
+      "status": 200,
+      "requestId": "22f95e29178868292a9ccdb3786e26c1",
+      "durationMs": 0
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/plans/1",
+      "status": 200,
+      "requestId": "d6c64cb1ee63571e440e3e742da42a34",
+      "durationMs": 5
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/catalog",
+      "status": 200,
+      "requestId": "9c842c7165c8e9ce240a3289bedd1c43",
+      "durationMs": 2
+    },
+    {
+      "method": "GET",
+      "path": "http://127.0.0.1:8080/api/v1/plans/1",
+      "status": 200,
+      "requestId": "290b21ada875d96589f35c4d51b91869",
+      "durationMs": 7
+    }
+  ],
+  "http_checks": [
+    {
+      "label": "未登录读取方案 -> 401",
+      "method": "GET",
+      "path": "/api/v1/plans/1",
+      "status": 401,
+      "requestId": "3477af23c7c1a8347ff2804c8ac9bf82",
+      "errorRequestId": "3477af23c7c1a8347ff2804c8ac9bf82",
+      "code": "AUTH_REQUIRED",
+      "details": null
+    },
+    {
+      "label": "未登录方案列表 -> 401",
+      "method": "GET",
+      "path": "/api/v1/plans",
+      "status": 401,
+      "requestId": "6a01935ecf3093c0f39f10d04b4be07b",
+      "errorRequestId": "6a01935ecf3093c0f39f10d04b4be07b",
+      "code": "AUTH_REQUIRED",
+      "details": null
+    },
+    {
+      "label": "非法分享令牌 -> 404",
+      "method": "GET",
+      "path": "/api/v1/share/[redacted]",
+      "status": 404,
+      "requestId": "3bd301b119bf9575fda94cd92cb8aa67",
+      "errorRequestId": "3bd301b119bf9575fda94cd92cb8aa67",
+      "code": "NOT_FOUND",
+      "details": null
+    },
+    {
+      "label": "owner 登录（证据核对）",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "requestId": "5088bbcef8baeb919a5cceea719ac21e",
+      "errorRequestId": "",
+      "code": "",
+      "details": null
+    },
+    {
+      "label": "owner 读取演示户型",
+      "method": "GET",
+      "path": "/api/v1/plans/1",
+      "status": 200,
+      "requestId": "fbb9095831c352999b6d38958f6ed735",
+      "errorRequestId": "",
+      "code": "",
+      "details": null
+    },
+    {
+      "label": "owner CSV 导出",
+      "method": "GET",
+      "path": "/api/v1/plans/1/export.csv",
+      "status": 200,
+      "requestId": "e68f71f4b65f4f027ce072de19fcb5d1",
+      "errorRequestId": "",
+      "code": "",
+      "details": null
+    },
+    {
+      "label": "匿名只读分享 API",
+      "method": "GET",
+      "path": "/api/v1/share/[redacted]",
+      "status": 200,
+      "requestId": "2ec999df3c1517605517cda4d8eef4db",
+      "errorRequestId": "",
+      "code": "",
+      "details": null
+    },
+    {
+      "label": "匿名分享页 HTML",
+      "method": "GET",
+      "path": "/share/[redacted]",
+      "status": 200,
+      "requestId": "acef4f46d2d20e85de69537ab55e4e18",
+      "errorRequestId": "",
+      "code": "",
+      "details": null
+    },
+    {
+      "label": "匿名共享 CSV",
+      "method": "GET",
+      "path": "/api/v1/share/[redacted]/export.csv",
+      "status": 200,
+      "requestId": "239ee26ca633118acaf8112b3a1b268a",
+      "errorRequestId": "",
+      "code": "",
+      "details": null
+    },
+    {
+      "label": "other 用户 注册",
+      "method": "POST",
+      "path": "/api/v1/auth/register",
+      "status": 201,
+      "requestId": "0969d043f617585fd2af7f58a57021d0",
+      "errorRequestId": "",
+      "code": "",
+      "details": null
+    },
+    {
+      "label": "other 用户 登录",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "requestId": "e0f90eaa59997b8241b60e009a96b9a4",
+      "errorRequestId": "",
+      "code": "",
+      "details": null
+    },
+    {
+      "label": "他人读取方案 -> 404",
+      "method": "GET",
+      "path": "/api/v1/plans/1",
+      "status": 404,
+      "requestId": "c36b31e2ae064a7c285d0ab1b218e551",
+      "errorRequestId": "c36b31e2ae064a7c285d0ab1b218e551",
+      "code": "NOT_FOUND",
+      "details": null
+    },
+    {
+      "label": "他人修改方案 -> 404",
+      "method": "PUT",
+      "path": "/api/v1/plans/1",
+      "status": 404,
+      "requestId": "e3e52bc32fbf74633e2e869ccce839a1",
+      "errorRequestId": "e3e52bc32fbf74633e2e869ccce839a1",
+      "code": "NOT_FOUND",
+      "details": null
+    },
+    {
+      "label": "旧 revision 保存 -> 409",
+      "method": "PUT",
+      "path": "/api/v1/plans/1",
+      "status": 409,
+      "requestId": "0403fe0f540b2e95983350ad0bad1d45",
+      "errorRequestId": "0403fe0f540b2e95983350ad0bad1d45",
+      "code": "CONFLICT_REVISION",
+      "details": {
+        "expectedRevision": 1,
+        "currentRevision": 2
+      }
+    },
+    {
+      "label": "缺 CSRF 新建 -> 403",
+      "method": "POST",
+      "path": "/api/v1/plans",
+      "status": 403,
+      "requestId": "8f539aa5d10b93e03cc04b713ebe9230",
+      "errorRequestId": "8f539aa5d10b93e03cc04b713ebe9230",
+      "code": "FORBIDDEN",
+      "details": {
+        "reason": "csrf"
+      }
+    },
+    {
+      "label": "分享 API 写方法 -> 405",
+      "method": "PUT",
+      "path": "/api/v1/share/[redacted]",
+      "status": 405,
+      "requestId": "8552462ef0ddfdbd03e79620d792133b",
+      "errorRequestId": "8552462ef0ddfdbd03e79620d792133b",
+      "code": "METHOD_NOT_ALLOWED",
+      "details": {
+        "allowed": [
+          "GET"
+        ]
+      }
+    }
+  ]
+}

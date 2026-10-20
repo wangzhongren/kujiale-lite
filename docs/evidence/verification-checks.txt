@@ -1,0 +1,43 @@
+# browser full-flow checks
+PASS UI register via real API -> empty plan list
+PASS created blank 演示户型 via UI
+PASS blank plan starts from one 12 m2 room
+PASS 2D keyboard zoom out keeps both rooms reachable
+PASS drew second connected room by clicking canvas (7 walls / 2 rooms)
+PASS placed 2 doors + 2 windows on walls
+PASS 3 furniture placed and rotated, 2 room materials applied
+PASS 3D orbit view renders and drag orbit executed
+PASS 3D first-person mode active
+PASS saved document revision 2 with 2 rooms/4 openings/3 furniture
+PASS room names and materials persisted in the same document
+PASS all 3 furniture rotations are 30 degrees
+PASS logout/login -> opened from list with revision 2 and same document
+PASS read-only share link generated via UI
+PASS anonymous share 2D shows the same 2-room document read-only
+PASS share page has no editing controls and offers CSV list download
+PASS anonymous share 3D uses the same document
+PASS anonymous shared CSV has UTF-8 BOM + CRLF + 12.00/9.00
+PASS shared CSV includes per-room material IDs
+
+# browser restart checks
+PASS after process restart: login + open from list retains revision 2
+PASS after process restart: same 7 walls / 4 openings / 3 furniture / 2 rooms
+PASS after process restart: room names/materials/rotations retained
+
+# HTTP negative/contract checks
+401 GET /api/v1/plans/1 requestId=3477af23c7c1a8347ff2804c8ac9bf82 code=AUTH_REQUIRED :: 未登录读取方案 -> 401
+401 GET /api/v1/plans requestId=6a01935ecf3093c0f39f10d04b4be07b code=AUTH_REQUIRED :: 未登录方案列表 -> 401
+404 GET /api/v1/share/[redacted] requestId=3bd301b119bf9575fda94cd92cb8aa67 code=NOT_FOUND :: 非法分享令牌 -> 404
+200 POST /api/v1/auth/login requestId=5088bbcef8baeb919a5cceea719ac21e code=- :: owner 登录（证据核对）
+200 GET /api/v1/plans/1 requestId=fbb9095831c352999b6d38958f6ed735 code=- :: owner 读取演示户型
+200 GET /api/v1/plans/1/export.csv requestId=e68f71f4b65f4f027ce072de19fcb5d1 code=- :: owner CSV 导出
+200 GET /api/v1/share/[redacted] requestId=2ec999df3c1517605517cda4d8eef4db code=- :: 匿名只读分享 API
+200 GET /share/[redacted] requestId=acef4f46d2d20e85de69537ab55e4e18 code=- :: 匿名分享页 HTML
+200 GET /api/v1/share/[redacted]/export.csv requestId=239ee26ca633118acaf8112b3a1b268a code=- :: 匿名共享 CSV
+201 POST /api/v1/auth/register requestId=0969d043f617585fd2af7f58a57021d0 code=- :: other 用户 注册
+200 POST /api/v1/auth/login requestId=e0f90eaa59997b8241b60e009a96b9a4 code=- :: other 用户 登录
+404 GET /api/v1/plans/1 requestId=c36b31e2ae064a7c285d0ab1b218e551 code=NOT_FOUND :: 他人读取方案 -> 404
+404 PUT /api/v1/plans/1 requestId=e3e52bc32fbf74633e2e869ccce839a1 code=NOT_FOUND :: 他人修改方案 -> 404
+409 PUT /api/v1/plans/1 requestId=0403fe0f540b2e95983350ad0bad1d45 code=CONFLICT_REVISION :: 旧 revision 保存 -> 409
+403 POST /api/v1/plans requestId=8f539aa5d10b93e03cc04b713ebe9230 code=FORBIDDEN :: 缺 CSRF 新建 -> 403
+405 PUT /api/v1/share/[redacted] requestId=8552462ef0ddfdbd03e79620d792133b code=METHOD_NOT_ALLOWED :: 分享 API 写方法 -> 405

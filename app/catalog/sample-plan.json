@@ -1,0 +1,40 @@
+{
+  "id": "sample-two-rooms",
+  "name": "样板间 · 两室",
+  "doc": {
+    "schemaVersion": 1,
+    "units": "mm",
+    "walls": [
+      { "id": "w1", "a": [0, 0], "b": [4000, 0], "thickness": 120, "height": 2800 },
+      { "id": "w2", "a": [4000, 0], "b": [4000, 3000], "thickness": 120, "height": 2800 },
+      { "id": "w3", "a": [4000, 3000], "b": [0, 3000], "thickness": 120, "height": 2800 },
+      { "id": "w4", "a": [0, 3000], "b": [0, 0], "thickness": 120, "height": 2800 },
+      { "id": "w5", "a": [4000, 0], "b": [7000, 0], "thickness": 120, "height": 2800 },
+      { "id": "w6", "a": [7000, 0], "b": [7000, 3000], "thickness": 120, "height": 2800 },
+      { "id": "w7", "a": [7000, 3000], "b": [4000, 3000], "thickness": 120, "height": 2800 }
+    ],
+    "openings": [
+      { "id": "o1", "wallId": "w3", "type": "door", "offset": 1400, "width": 900, "height": 2100, "sill": 0 },
+      { "id": "o2", "wallId": "w2", "type": "door", "offset": 800, "width": 900, "height": 2100, "sill": 0 },
+      { "id": "o3", "wallId": "w1", "type": "window", "offset": 1200, "width": 1500, "height": 1400, "sill": 900 },
+      { "id": "o4", "wallId": "w6", "type": "window", "offset": 900, "width": 1200, "height": 1400, "sill": 900 }
+    ],
+    "rooms": [
+      { "id": "r1", "name": "客厅", "loopKey": "w1|w2|w3|w4" },
+      { "id": "r2", "name": "卧室", "loopKey": "w2|w5|w6|w7" }
+    ],
+    "furniture": [
+      { "id": "f1", "catalogId": "sofa-2", "x": 1200, "y": 500, "rotation": 0 },
+      { "id": "f2", "catalogId": "coffee-table", "x": 1200, "y": 1500, "rotation": 0 },
+      { "id": "f3", "catalogId": "tv-stand", "x": 1200, "y": 2600, "rotation": 0 },
+      { "id": "f4", "catalogId": "plant", "x": 3600, "y": 2600, "rotation": 0 },
+      { "id": "f5", "catalogId": "bed-double", "x": 5500, "y": 1200, "rotation": 0 },
+      { "id": "f6", "catalogId": "wardrobe", "x": 6500, "y": 2800, "rotation": 0 },
+      { "id": "f7", "catalogId": "chair", "x": 5500, "y": 2500, "rotation": 90 }
+    ],
+    "materials": {
+      "floor": { "r1": "floor-oak", "r2": "floor-walnut" },
+      "wall": { "r1": "paint-warm-white", "r2": "paint-sage" }
+    }
+  }
+}

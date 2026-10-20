@@ -1,0 +1,23 @@
+role: backend
+entries:
+  - kind: directory
+    path: app/
+    purpose: 后端 Python 标准库实现（http/auth/plans/share/export/catalog/db/obs 分层）
+  - kind: directory
+    path: tests/unit/
+    purpose: 后端单元测试（几何/面积/CSV/迁移/导入图无环）
+  - kind: directory
+    path: tests/integration/
+    purpose: 后端集成测试（仓储/事务/重启恢复）
+  - kind: directory
+    path: tests/e2e/
+    purpose: HTTP 端到端测试与权限/非法路径负例
+  - kind: directory
+    path: data/
+    purpose: 本地 SQLite 运行数据与迁移验证（自动生成，可重置）
+  - kind: file
+    path: README.md
+    purpose: 启动、架构、API、权限、schema、状态机、容量边界与已知限制
+  - kind: directory
+    path: docs/evidence/
+    purpose: 真实启动演示、测试输出、示例 CSV、日志摘录与重启恢复证据

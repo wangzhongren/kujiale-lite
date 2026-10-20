@@ -1,0 +1,8 @@
+role: frontend
+entries:
+  - kind: directory
+    path: web/
+    purpose: 原生 ES Modules 前端（2D 编辑器、同源 3D、目录、三态与可访问性、只读分享）
+  - kind: directory
+    path: tests/frontend/
+    purpose: node:test 前端纯函数测试（撤销栈、吸附、几何预览基准对齐）

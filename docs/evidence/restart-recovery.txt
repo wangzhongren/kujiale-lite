@@ -1,0 +1,15 @@
+# restart recovery evidence
+
+time: 2026-10-20T12:23:13Z
+command: python -m app --port 8080 (same data dir: data/)
+stop method: process.terminate() (forced stop, simulates a crash)
+
+before stop: user_version=1 integrity_check=ok users=7 sessions=4 plans=2 shares=4
+after restart: user_version=1 integrity_check=ok users=7 sessions=4 plans=2 shares=4
+session after restart: HTTP 200
+plan after restart: HTTP 200 revision=2
+share after restart: HTTP 200 readOnly=True
+
+The session cookie, plan document and share token were all issued before
+the forced stop; all three were served by the restarted process from the
+same SQLite database without re-login.

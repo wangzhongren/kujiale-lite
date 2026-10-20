@@ -1,0 +1,15 @@
+# request log excerpts for negative paths (401/403/404/409/413/422/429)
+ts=2026-10-20T12:23:12.671Z requestId=949cc296aea704fcf683ee19a7c41a5f route='GET /api/v1/plans' status=401 durationMs=0.77 errCode=AUTH_REQUIRED
+ts=2026-10-20T12:23:12.838Z requestId=cde907b2aa5ed3174ae71f781014ca04 route='GET /api/v1/plans/{plan_id}' status=404 durationMs=7.42 errCode=NOT_FOUND
+ts=2026-10-20T12:23:12.846Z requestId=5447fbad72cfbdda8a7a90d34dc89858 route='PUT /api/v1/plans/{plan_id}' status=404 durationMs=6.41 errCode=NOT_FOUND
+ts=2026-10-20T12:23:12.862Z requestId=3d758278db13b8449d7974169f5d6ed0 route='POST /api/v1/plans/{plan_id}/share' status=404 durationMs=4.87 errCode=NOT_FOUND
+ts=2026-10-20T12:23:12.863Z requestId=1af5bf4123afbb2e09180f0f02bb131a route='PUT /api/v1/plans/{plan_id}' status=403 durationMs=0.73 errCode=FORBIDDEN
+ts=2026-10-20T12:23:12.894Z requestId=70abdeddcbae41f63a894b944acd17b1 route='PUT /api/v1/plans/{plan_id}' status=409 durationMs=6.06 errCode=CONFLICT_REVISION
+ts=2026-10-20T12:23:12.905Z requestId=b5ca9296aa881691348c0db165b7cd99 route='GET /api/v1/share/{token}' status=404 durationMs=0.86 errCode=NOT_FOUND
+ts=2026-10-20T12:23:13.039Z requestId=cd76585fbfa705664c23e9456b03bed0 route='GET /api/v1/share/{token}' status=404 durationMs=6.03 errCode=NOT_FOUND
+ts=2026-10-20T12:23:13.149Z requestId=efab8759df6387595872616f7ce743cd route='POST /api/v1/auth/login' status=401 durationMs=41.29 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:23:13.206Z requestId=1dcd3d075a3bcbe6f57e522346309cfc route='POST /api/v1/auth/login' status=401 durationMs=41.96 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:23:13.249Z requestId=f55e48aa13007c430d0e8afab9d81ca7 route='POST /api/v1/auth/login' status=401 durationMs=41.71 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:23:13.315Z requestId=adb53a535419de46ef67eab9d974e33c route='POST /api/v1/auth/login' status=401 durationMs=43.12 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:23:13.359Z requestId=e9179289b45ca56d905f03354f7b293f route='POST /api/v1/auth/login' status=401 durationMs=43.19 errCode=AUTH_INVALID_CREDENTIALS
+ts=2026-10-20T12:23:13.381Z requestId=5cbaccb373cd7b9d39d6835024bf85f3 route='POST /api/v1/auth/login' status=429 durationMs=1.52 errCode=AUTH_RATE_LIMITED

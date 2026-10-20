@@ -1,0 +1,688 @@
+{
+  "generated_at": "2026-10-20T13:48:17Z",
+  "verdict": "evidence-complete",
+  "quality_tier": "production",
+  "start_command": "python -m app --port 8080 --data-dir <临时目录>",
+  "url": "http://127.0.0.1:8080",
+  "environment": {
+    "python": "3.14.0",
+    "node": "v24.11.1",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "tests": {
+    "backend_exit": 0,
+    "backend_ran": 141,
+    "node_exit": 0,
+    "node_pass": 35,
+    "node_fail": 0
+  },
+  "browser": {
+    "planId": 1,
+    "revision": 2,
+    "shareTokenLength": 43,
+    "checks": 19,
+    "ok": true
+  },
+  "browser_restart": {
+    "ok": true,
+    "checks": 3
+  },
+  "timings_ms": {
+    "create_ms": 21.5,
+    "read_ms": 13.2,
+    "csv_ms": 9.7
+  },
+  "first_exit": 1,
+  "db_before": {
+    "user_version": 1,
+    "integrity": "ok",
+    "journal_mode": "wal",
+    "counts": {
+      "users": 3,
+      "sessions": 3,
+      "plans": 3,
+      "shares": 2
+    }
+  },
+  "db_after": {
+    "user_version": 1,
+    "integrity": "ok",
+    "journal_mode": "wal",
+    "counts": {
+      "users": 3,
+      "sessions": 4,
+      "plans": 3,
+      "shares": 2
+    }
+  },
+  "http_checks": [
+    {
+      "label": "SPA",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "requestId": "a8f68711d979f7e2d6ef6aafbec1fddb",
+      "code": ""
+    },
+    {
+      "label": "目录",
+      "method": "GET",
+      "path": "/api/v1/catalog",
+      "status": 200,
+      "requestId": "902fd24dd9c5185616bacda432614fb4",
+      "code": ""
+    },
+    {
+      "label": "注册",
+      "method": "POST",
+      "path": "/api/v1/auth/register",
+      "status": 201,
+      "requestId": "31813ab5e244113f4587bba415ffddb1",
+      "code": ""
+    },
+    {
+      "label": "登录",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "requestId": "7c8d390a649c41bc847b1dfbda035fb3",
+      "code": ""
+    },
+    {
+      "label": "me",
+      "method": "GET",
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "requestId": "8b6a86cde965f5b51705b2b1f7748def",
+      "code": ""
+    },
+    {
+      "label": "列表",
+      "method": "GET",
+      "path": "/api/v1/plans?page=1&pageSize=20",
+      "status": 200,
+      "requestId": "d61346c6af96451e304bccc0a56a26c1",
+      "code": ""
+    },
+    {
+      "label": "新建",
+      "method": "POST",
+      "path": "/api/v1/plans",
+      "status": 201,
+      "requestId": "4e7d123856eb8d5d74ff6b65677d3557",
+      "code": ""
+    },
+    {
+      "label": "样板间",
+      "method": "GET",
+      "path": "/api/v1/sample",
+      "status": 200,
+      "requestId": "7359453dc51287c7e92e69f8a17367b2",
+      "code": ""
+    },
+    {
+      "label": "保存",
+      "method": "PUT",
+      "path": "/api/v1/plans/2",
+      "status": 200,
+      "requestId": "add76f1ab113738f40185e2b5fb00c87",
+      "code": ""
+    },
+    {
+      "label": "owner CSV",
+      "method": "GET",
+      "path": "/api/v1/plans/2/export.csv",
+      "status": 200,
+      "requestId": "6435ca1e11efe712eeb471f2a23ab0d7",
+      "code": ""
+    },
+    {
+      "label": "分享",
+      "method": "POST",
+      "path": "/api/v1/plans/2/share",
+      "status": 201,
+      "requestId": "f55ec2cf66ef4611d92f8687c849fb05",
+      "code": ""
+    },
+    {
+      "label": "分享读",
+      "method": "GET",
+      "path": "/api/v1/share/[redacted]",
+      "status": 200,
+      "requestId": "d2cde7d6d70585e0aeeb7931900eb317",
+      "code": ""
+    },
+    {
+      "label": "分享 CSV",
+      "method": "GET",
+      "path": "/api/v1/share/[redacted]/export.csv",
+      "status": 200,
+      "requestId": "a0864d948d3e47566e6bc88afbccbb80",
+      "code": ""
+    },
+    {
+      "label": "401",
+      "method": "GET",
+      "path": "/api/v1/plans/2",
+      "status": 401,
+      "requestId": "0efabaca1cfe482c2bfb4b8016d14e80",
+      "code": "AUTH_REQUIRED"
+    },
+    {
+      "label": "404",
+      "method": "GET",
+      "path": "/api/v1/share/[redacted]",
+      "status": 404,
+      "requestId": "2b17c3c7d7e1038ee973c0c8896b6c92",
+      "code": "NOT_FOUND"
+    },
+    {
+      "label": "405",
+      "method": "PUT",
+      "path": "/api/v1/share/[redacted]",
+      "status": 405,
+      "requestId": "a820dc4effd2ccb1a6a57721f1112965",
+      "code": "METHOD_NOT_ALLOWED"
+    },
+    {
+      "label": "他人注册",
+      "method": "POST",
+      "path": "/api/v1/auth/register",
+      "status": 201,
+      "requestId": "8e44834366794b0a14b5cfc3be27c6c6",
+      "code": ""
+    },
+    {
+      "label": "他人登录",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "requestId": "944e67a49f1538fac2fe75d6149ad95b",
+      "code": ""
+    },
+    {
+      "label": "跨读",
+      "method": "GET",
+      "path": "/api/v1/plans/2",
+      "status": 404,
+      "requestId": "18cc68aaa862610ccd60107bf7d30b48",
+      "code": "NOT_FOUND"
+    },
+    {
+      "label": "跨写",
+      "method": "PUT",
+      "path": "/api/v1/plans/2",
+      "status": 404,
+      "requestId": "ea53df97632d44fa6fd118ee72231a7a",
+      "code": "NOT_FOUND"
+    },
+    {
+      "label": "旧 revision",
+      "method": "PUT",
+      "path": "/api/v1/plans/2",
+      "status": 409,
+      "requestId": "f71a45187f8f59a14b06cb44bc44a7b2",
+      "code": "CONFLICT_REVISION"
+    },
+    {
+      "label": "csrf",
+      "method": "POST",
+      "path": "/api/v1/plans",
+      "status": 403,
+      "requestId": "d2c857aecc299fdb7b4c994142108b49",
+      "code": "FORBIDDEN"
+    },
+    {
+      "label": "v2",
+      "method": "PUT",
+      "path": "/api/v1/plans/2",
+      "status": 422,
+      "requestId": "4fbfcf9ab6c14dbed2ea23212a8bba2c",
+      "code": "UNSUPPORTED_SCHEMA_VERSION"
+    },
+    {
+      "label": "413",
+      "method": "POST",
+      "path": "/api/v1/plans",
+      "status": 413,
+      "requestId": "1053e9763296670b04cbacb6e2302bae",
+      "code": "PAYLOAD_TOO_LARGE"
+    },
+    {
+      "label": "pageSize",
+      "method": "GET",
+      "path": "/api/v1/plans?page=1&pageSize=1000",
+      "status": 200,
+      "requestId": "71650d5bfc16201949dcf4d6b3706d30",
+      "code": ""
+    },
+    {
+      "label": "page=0",
+      "method": "GET",
+      "path": "/api/v1/plans?page=0",
+      "status": 422,
+      "requestId": "100d3a373e3ef0a45bdbbd506b704cb6",
+      "code": "VALIDATION_FAILED"
+    },
+    {
+      "label": "400/400 保存",
+      "method": "POST",
+      "path": "/api/v1/plans",
+      "status": 201,
+      "requestId": "4c7e69c976b6c81f8f96fcb5eb22d809",
+      "code": ""
+    },
+    {
+      "label": "400/400 读取",
+      "method": "GET",
+      "path": "/api/v1/plans/3",
+      "status": 200,
+      "requestId": "135641e39658a7f08bd81de89db97796",
+      "code": ""
+    },
+    {
+      "label": "400/400 CSV",
+      "method": "GET",
+      "path": "/api/v1/plans/3/export.csv",
+      "status": 200,
+      "requestId": "92215d563709dceb2862e8de00c4925f",
+      "code": ""
+    },
+    {
+      "label": "重启登录",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "requestId": "f8d0bea813e3d035402e742ebb1d5a8a",
+      "code": ""
+    },
+    {
+      "label": "重启读取",
+      "method": "GET",
+      "path": "/api/v1/plans/2",
+      "status": 200,
+      "requestId": "c854b4b7177f664a7e458cf3e84206e8",
+      "code": ""
+    },
+    {
+      "label": "重启分享",
+      "method": "GET",
+      "path": "/api/v1/share/[redacted]",
+      "status": 200,
+      "requestId": "1103ea7f087bd82bfbf8a2e286110f78",
+      "code": ""
+    }
+  ],
+  "checks": [
+    {
+      "name": "找到 Chrome/Edge",
+      "ok": true,
+      "detail": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    },
+    {
+      "name": "后端 unittest 全绿",
+      "ok": true,
+      "detail": {
+        "exit": 0,
+        "ran": "141"
+      }
+    },
+    {
+      "name": "前端 node:test 全绿",
+      "ok": true,
+      "detail": {
+        "exit": 0,
+        "pass": "35"
+      }
+    },
+    {
+      "name": "真实启动 python -m app --port 8080",
+      "ok": true,
+      "detail": {
+        "base": "http://127.0.0.1:8080"
+      }
+    },
+    {
+      "name": "真实浏览器全流程",
+      "ok": true,
+      "detail": {
+        "exit": 0,
+        "checks": 19,
+        "failures": []
+      }
+    },
+    {
+      "name": "CSP/nosniff",
+      "ok": true,
+      "detail": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; conne"
+      }
+    },
+    {
+      "name": "目录 >=9 家具 / >=6 材质",
+      "ok": true,
+      "detail": {
+        "furniture": 12,
+        "materials": 8
+      }
+    },
+    {
+      "name": "登录 CSRF Cookie",
+      "ok": true,
+      "detail": [
+        "kj_csrf",
+        "kj_session"
+      ]
+    },
+    {
+      "name": "会话可用",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "新账号列表为空",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "默认 4 墙/1 房/12.00 m²",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "保存 revision=2、7 墙/4 门窗/3 家具/2 房",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "面积 12.00/9.00 合计 21.00",
+      "ok": true,
+      "detail": {
+        "areas": [
+          9.0,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "30° 旋转与两房材质",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "CSV 列/BOM/CRLF/12.00/9.00/家具 2+1/材质",
+      "ok": true,
+      "detail": {
+        "err": "",
+        "header": [
+          "room_name",
+          "area_m2",
+          "furniture_count",
+          "floor_material",
+          "floor_area_m2",
+          "wall_material",
+          "wall_area_m2"
+        ],
+        "rows": [
+          [
+            "客厅",
+            "12.00",
+            "2",
+            "floor-oak",
+            "12.00",
+            "paint-warm-white",
+            "33.32"
+          ],
+          [
+            "卧室",
+            "9.00",
+            "1",
+            "floor-tile-grey",
+            "9.00",
+            "paint-sage",
+            "30.03"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "分享令牌长度 >=20",
+      "ok": true,
+      "detail": {
+        "length": 43
+      }
+    },
+    {
+      "name": "匿名分享只读 revision=2",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "owner/shared CSV 字节一致",
+      "ok": true,
+      "detail": {
+        "bytes": 202
+      }
+    },
+    {
+      "name": "未登录 401",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "非法分享 404",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "405 带 Allow: GET",
+      "ok": true,
+      "detail": {
+        "allow": "GET"
+      }
+    },
+    {
+      "name": "跨用户读 404",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "409 CONFLICT_REVISION + requestId",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "缺 CSRF 403",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schemaVersion=2 422",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "请求体超限 413",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "pageSize 上限 100",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "400 墙/400 家具可读写",
+      "ok": true,
+      "detail": {
+        "create_ms": 21.5,
+        "read_ms": 13.2,
+        "csv_ms": 9.7
+      }
+    },
+    {
+      "name": "400/400 单次请求 <2000ms",
+      "ok": true,
+      "detail": {
+        "create_ms": 21.5,
+        "read_ms": 13.2,
+        "csv_ms": 9.7
+      }
+    },
+    {
+      "name": "SQLite v1/integrity ok/WAL",
+      "ok": true,
+      "detail": {
+        "user_version": 1,
+        "integrity": "ok",
+        "journal_mode": "wal",
+        "counts": {
+          "users": 3,
+          "sessions": 3,
+          "plans": 3,
+          "shares": 2
+        }
+      }
+    },
+    {
+      "name": "强停（模拟崩溃）退出码非零",
+      "ok": true,
+      "detail": {
+        "exit": 1
+      }
+    },
+    {
+      "name": "同一命令重启成功",
+      "ok": true,
+      "detail": {
+        "first_exit": 1
+      }
+    },
+    {
+      "name": "重启后 revision=2、3 家具/30°/材质保留",
+      "ok": true,
+      "detail": {
+        "revision": 2
+      }
+    },
+    {
+      "name": "重启后分享仍只读且 revision=2",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "重启后 integrity ok/WAL/数据行保留",
+      "ok": true,
+      "detail": {
+        "user_version": 1,
+        "integrity": "ok",
+        "journal_mode": "wal",
+        "counts": {
+          "users": 3,
+          "sessions": 4,
+          "plans": 3,
+          "shares": 2
+        }
+      }
+    },
+    {
+      "name": "真实浏览器重启后重新登录并打开",
+      "ok": true,
+      "detail": {
+        "exit": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "375x812 真实截图",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "size": [
+          375,
+          812
+        ],
+        "bytes": 28972
+      }
+    },
+    {
+      "name": "375x812 真实截图",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "size": [
+          375,
+          812
+        ],
+        "bytes": 46112
+      }
+    },
+    {
+      "name": "1440x900 真实截图",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "size": [
+          1440,
+          900
+        ],
+        "bytes": 42028
+      }
+    },
+    {
+      "name": "服务端日志不含口令/Cookie/CSRF/分享令牌",
+      "ok": true,
+      "detail": {
+        "leaked": []
+      }
+    },
+    {
+      "name": "14 张流程截图全部存在且非空",
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "small": [],
+        "files": [
+          "narrow-375-login.png",
+          "narrow-375-share.png",
+          "verification-01-login.png",
+          "verification-02-empty-list.png",
+          "verification-03-blank-plan.png",
+          "verification-04-two-rooms.png",
+          "verification-05-openings.png",
+          "verification-06-furniture-materials.png",
+          "verification-07-3d-orbit.png",
+          "verification-08-3d-first-person.png",
+          "verification-09-saved.png",
+          "verification-10-list-after-relogin.png",
+          "verification-11-reopened.png",
+          "verification-12-share-2d.png",
+          "verification-13-share-3d.png",
+          "verification-14-restart-reopened.png",
+          "wide-1440-login.png"
+        ]
+      }
+    }
+  ],
+  "failed_checks": [],
+  "screenshots": [
+    "narrow-375-login.png",
+    "narrow-375-share.png",
+    "verification-01-login.png",
+    "verification-02-empty-list.png",
+    "verification-03-blank-plan.png",
+    "verification-04-two-rooms.png",
+    "verification-05-openings.png",
+    "verification-06-furniture-materials.png",
+    "verification-07-3d-orbit.png",
+    "verification-08-3d-first-person.png",
+    "verification-09-saved.png",
+    "verification-10-list-after-relogin.png",
+    "verification-11-reopened.png",
+    "verification-12-share-2d.png",
+    "verification-13-share-3d.png",
+    "verification-14-restart-reopened.png",
+    "wide-1440-login.png"
+  ],
+  "data_dir_note": "隔离临时目录；未修改项目 data/kujiale.db 或 docs/evidence"
+}

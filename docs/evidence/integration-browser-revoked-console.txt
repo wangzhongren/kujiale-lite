@@ -1,0 +1,3 @@
+PASS revoked share page shows invalid/revoked error
+PASS revoked share page exposes NOT_FOUND + requestId
+SHOT integration-share-revoked.png

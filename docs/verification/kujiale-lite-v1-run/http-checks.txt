@@ -1,0 +1,32 @@
+200 GET / requestId=a8f68711d979f7e2d6ef6aafbec1fddb code=- :: SPA
+200 GET /api/v1/catalog requestId=902fd24dd9c5185616bacda432614fb4 code=- :: 目录
+201 POST /api/v1/auth/register requestId=31813ab5e244113f4587bba415ffddb1 code=- :: 注册
+200 POST /api/v1/auth/login requestId=7c8d390a649c41bc847b1dfbda035fb3 code=- :: 登录
+200 GET /api/v1/auth/me requestId=8b6a86cde965f5b51705b2b1f7748def code=- :: me
+200 GET /api/v1/plans?page=1&pageSize=20 requestId=d61346c6af96451e304bccc0a56a26c1 code=- :: 列表
+201 POST /api/v1/plans requestId=4e7d123856eb8d5d74ff6b65677d3557 code=- :: 新建
+200 GET /api/v1/sample requestId=7359453dc51287c7e92e69f8a17367b2 code=- :: 样板间
+200 PUT /api/v1/plans/2 requestId=add76f1ab113738f40185e2b5fb00c87 code=- :: 保存
+200 GET /api/v1/plans/2/export.csv requestId=6435ca1e11efe712eeb471f2a23ab0d7 code=- :: owner CSV
+201 POST /api/v1/plans/2/share requestId=f55ec2cf66ef4611d92f8687c849fb05 code=- :: 分享
+200 GET /api/v1/share/[redacted] requestId=d2cde7d6d70585e0aeeb7931900eb317 code=- :: 分享读
+200 GET /api/v1/share/[redacted]/export.csv requestId=a0864d948d3e47566e6bc88afbccbb80 code=- :: 分享 CSV
+401 GET /api/v1/plans/2 requestId=0efabaca1cfe482c2bfb4b8016d14e80 code=AUTH_REQUIRED :: 401
+404 GET /api/v1/share/[redacted] requestId=2b17c3c7d7e1038ee973c0c8896b6c92 code=NOT_FOUND :: 404
+405 PUT /api/v1/share/[redacted] requestId=a820dc4effd2ccb1a6a57721f1112965 code=METHOD_NOT_ALLOWED :: 405
+201 POST /api/v1/auth/register requestId=8e44834366794b0a14b5cfc3be27c6c6 code=- :: 他人注册
+200 POST /api/v1/auth/login requestId=944e67a49f1538fac2fe75d6149ad95b code=- :: 他人登录
+404 GET /api/v1/plans/2 requestId=18cc68aaa862610ccd60107bf7d30b48 code=NOT_FOUND :: 跨读
+404 PUT /api/v1/plans/2 requestId=ea53df97632d44fa6fd118ee72231a7a code=NOT_FOUND :: 跨写
+409 PUT /api/v1/plans/2 requestId=f71a45187f8f59a14b06cb44bc44a7b2 code=CONFLICT_REVISION :: 旧 revision
+403 POST /api/v1/plans requestId=d2c857aecc299fdb7b4c994142108b49 code=FORBIDDEN :: csrf
+422 PUT /api/v1/plans/2 requestId=4fbfcf9ab6c14dbed2ea23212a8bba2c code=UNSUPPORTED_SCHEMA_VERSION :: v2
+413 POST /api/v1/plans requestId=1053e9763296670b04cbacb6e2302bae code=PAYLOAD_TOO_LARGE :: 413
+200 GET /api/v1/plans?page=1&pageSize=1000 requestId=71650d5bfc16201949dcf4d6b3706d30 code=- :: pageSize
+422 GET /api/v1/plans?page=0 requestId=100d3a373e3ef0a45bdbbd506b704cb6 code=VALIDATION_FAILED :: page=0
+201 POST /api/v1/plans requestId=4c7e69c976b6c81f8f96fcb5eb22d809 code=- :: 400/400 保存
+200 GET /api/v1/plans/3 requestId=135641e39658a7f08bd81de89db97796 code=- :: 400/400 读取
+200 GET /api/v1/plans/3/export.csv requestId=92215d563709dceb2862e8de00c4925f code=- :: 400/400 CSV
+200 POST /api/v1/auth/login requestId=f8d0bea813e3d035402e742ebb1d5a8a code=- :: 重启登录
+200 GET /api/v1/plans/2 requestId=c854b4b7177f664a7e458cf3e84206e8 code=- :: 重启读取
+200 GET /api/v1/share/[redacted] requestId=1103ea7f087bd82bfbf8a2e286110f78 code=- :: 重启分享
